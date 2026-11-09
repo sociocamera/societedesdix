@@ -230,11 +230,10 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- Carte 1 -->
-<article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                        <article onclick="openChantalModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-                                <!-- Badge Nomination placé en haut de l'image -->
                                 <span class="absolute top-3 left-3 px-2.5 py-1 bg-burgundy-800 text-white text-[11px] font-semibold rounded shadow-md z-10">Nomination</span>
                             </div>
                             <div class="p-6 flex-1 flex flex-col justify-between">
@@ -253,14 +252,11 @@
                             </div>
                         </article>
 
-
-
                         <!-- Carte 2 -->
-<article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                        <article onclick="openLangloisModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1pk9CzLPVGu28cs3fgY0B8b8HSf1EiC3l');"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-                                <!-- Badge Archives & Don placé en haut de l'image -->
                                 <span class="absolute top-3 left-3 px-2.5 py-1 bg-amber-700 text-white text-[11px] font-semibold rounded shadow-md z-10">Archives & Don</span>
                             </div>
                             <div class="p-6 flex-1 flex flex-col justify-between">
@@ -279,13 +275,11 @@
                             </div>
                         </article>
 
-
-                        <!-- Carte 3 -->
-<article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                        <!-- Carte 3 (Rendue cliquable pour ouvrir la modale Fernand Harvey) -->
+                        <article onclick="openHarveyModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1ZfRKiCGNIfczi8DwW0DW1ksgxRgRNkPL');"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-                                <!-- Badge Distinction académique placé en haut de l'image -->
                                 <span class="absolute top-3 left-3 px-2.5 py-1 bg-blue-700 text-white text-[11px] font-semibold rounded shadow-md z-10">Distinction académique</span>
                             </div>
                             <div class="p-6 flex-1 flex flex-col justify-between">
@@ -303,8 +297,6 @@
                                 </div>
                             </div>
                         </article>
-
-
                     </div>
                 </section>
 
@@ -322,7 +314,7 @@
 
                     <div class="bg-white rounded-2xl border border-academic-border p-6 md:p-8 academic-shadow">
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<!-- Couverture et badge (Image Google Drive) -->
+                            <!-- Couverture et badge (Image Google Drive) -->
                             <div class="lg:col-span-4 flex flex-col items-center justify-center">
                                 <div class="relative w-48 h-64 rounded-lg shadow-2xl overflow-hidden border-2 border-gold-400/50 group hover:scale-105 transition-transform duration-300 bg-gray-900">
                                     <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank"><img src="https://lh3.googleusercontent.com/d/1NLdBTzB6ko-LT9DlwJ_Sqt2MAMPpj6jC" alt="Couverture Les Cahiers des Dix" class="w-full h-full object-cover"></a>
@@ -350,7 +342,7 @@
                                 </div>
 
                                 <div class="pt-4 flex flex-wrap gap-4">
-<a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
+                                    <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
                                         <i class="fa-solid fa-cart-shopping text-gold-400"></i> Commander ce numéro (35 $)
                                     </a>
                                 </div>
@@ -517,7 +509,7 @@
                         </div>
 
                         <!-- Video Card 8 -->
-<div onclick="openVideoModal('Marie Pournin de La Faye : une histoire des femmes oubliées', 'https://drive.google.com/file/d/1wdROD1WbSJ4NH51shlshso-2LL3VxxQl/preview', 'Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure souvent négligée mais essentielle dans l\'établissement de Montréal au XVIIe siècle. Sa longue existence s\'étend sur tout le siècle et illustre les conditions ambiguës auxquelles devaient faire face les femmes pionnières de la colonie.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                        <div onclick="openVideoModal('Marie Pournin de La Faye : une histoire des femmes oubliées', 'https://drive.google.com/file/d/1wdROD1WbSJ4NH51shlshso-2LL3VxxQl/preview', 'Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure souvent négligée mais essentielle dans l\'établissement de Montréal au XVIIe siècle. Sa longue existence s\'étend sur tout le siècle et illustre les conditions ambiguës auxquelles devaient faire face les femmes pionnières de la colonie.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
                             <div class="relative h-44 bg-gray-900 overflow-hidden">  
                                 <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Hkm5ctrbPj37Z8yx4MrpPS6ZTsWpEQic');"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
@@ -533,7 +525,6 @@
                                 <p class="text-xs text-gray-500">Documentaire intégral</p>
                                 <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure essentielle de l'établissement de Montréal au XVIIe siècle.</p>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </section>
@@ -699,6 +690,143 @@
         </div>
     </div>
 
+    <!-- MODAL SPÉCIFIQUE POUR LA NOMINATION DE CHANTAL SAVOIE (CARTE 1) -->
+    <div id="chantal-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
+            <button onclick="closeChantalModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Photo associée à Gauche -->
+            <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil #1 - Chantal Savoie</span>
+            </div>
+
+            <!-- Texte biographique à Droite -->
+            <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+                        <i class="fa-solid fa-award"></i> Nomination Officielle
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">
+                        Nomination de Chantal Savoie au Fauteuil #1
+                    </h3>
+                    <div class="w-12 h-0.5 bg-gold-400"></div>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                        Les Dix sont heureux d’annoncer la nomination de Chantal Savoie au Fauteuil #1 en remplacement de Simon Langlois. Chantal Savoie est professeure au Département d’études littéraires de l’UQAM, membre du Centre de recherche interuniversitaire sur la littérature et la culture au Québec (CRILCQ) et titulaire de la Chaire de recherche en histoire culturelle de pratiques non dominantes (CRC). Spécialiste de l’histoire littéraire et culturelle des femmes et de la culture de grande consommation, elle fait partie depuis vingt-cinq ans du collectif La vie littéraire au Québec.
+                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                        Elle cosigne les tomes V, VI, VII (sous presse) et VIII (en préparation) de La vie littéraire au Québec parus aux Presses de l’Université Laval. Elle signe en outre la monographie Les femmes de lettres canadiennes-françaises au tournant du XXe siècle (2014), en plus d’avoir coordonné la publication de nombreux numéros de revues savantes et ouvrages collectifs. Elle dirige depuis 2023 la collection « La petite culture » aux Presses de l’Université de Montréal. Tout au long de son parcours, Chantal Savoie s’est impliquée dans la recherche collective et dans la création et la gestion d’infrastructures de recherche majeures.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeChantalModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SPÉCIFIQUE POUR LE DON WENDAT DE SIMON LANGLOIS (CARTE 2) -->
+    <div id="langlois-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            <button onclick="closeLangloisModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Photo associée affichée intégralement dans le haut de la fenêtre modale -->
+            <div class="w-full h-64 md:h-80 bg-gray-900 relative shrink-0">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1pk9CzLPVGu28cs3fgY0B8b8HSf1EiC3l');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 text-white space-y-1">
+                    <span class="inline-block bg-amber-700 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Archives & Don patrimonial</span>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold leading-snug">Don exceptionnel des archives Wendat par Simon Langlois</h3>
+                </div>
+            </div>
+
+            <!-- Texte complet à défilement dans le bas -->
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto space-y-6 text-academic-text">
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed text-justify">
+                    <p>
+                        Simon Langlois a été honoré par le Grand chef de la nation Wendat Pierre Picard lors d’une cérémonie de remise d’une rame traditionnelle Onquata – produite par le savoir-faire des artisans de Wendake – tenue le 28 septembre 2026, à la veille de la Journée nationale de réconciliation. « La rame sert à remonter et à descendre avec force les rapides de la vie » a déclaré le Grand chef de la nation Wendat en remerciant le professeur Langlois pour son généreux don d’une collection de cartes anciennes et de livres rares du XVIIIe siècle se rapportant aux réalités autochtones et à la nation des Hurons, pour reprendre le vocable de l’époque. « Cette donation va enrichir les archives de la nation Wendat » a déclaré Raphaël Boney, archiviste, diplômé du département de sociologie de l’Université Laval.
+                    </p>
+                    <p>
+                        Simon Langlois a effectué un important don de cartes anciennes du 18e siècle illustrant la toponomie autochtone du territoire de l’Amérique septentrionale à l’époque de la Nouvelle-France. Les cartes ont été établies à l’époque par les géographes-hydrographes Rigobert Bonne, Jacques-Nicolas Bellin, Guillaume Delisle et Robert Vaugondy, entre autres. Plusieurs de ces cartes avaient servi à illustrer de nombreux ouvrages dont : <i>L’Histoire de la Nouvelle-France</i> de François-Xavier Charlevoix (1744), <i>L’Histoire philosophique et politique des établissements et du commerce dans les deux Indes</i> (1781) de l’abbé Guillaume-T.- F. Prévost ou encore le <i>Dictionnaire universel, historique et critique des mœurs, lois & usages des coutumes, pratiques religieuses (…) des peuples des quatre parties du monde</i> (1702).
+                    </p>
+                    <p>
+                        Bon nombre des ouvrages anciens et livres rares faisant partie de la donation comportent des mentions et des références aux Hurons, à leur langue, leurs mœurs et coutumes. On y retrouve notamment de nombreuses références à la langue parlée par les Hurons. La liste comprend notamment une édition originale du célèbre livre <i>Mémoire de l’Amérique septentrionale</i> du baron De Lahontan, les tomes de <i>L’Abrégé de l’histoire générale</i> de De la Harpe (1780) portant sur la Nouvelle-France, <i>L’histoire générale, civile, naturelle, politique et religieuse de tous les peuples du monde</i> (1750) de Claude-François Lambert, un livre de Voltaire (1770) qui contient l’article « Huron », etc.
+                    </p>
+                    <p>
+                        Ces documents seront conservés aux Archives de la nation Wendat à Wendake et ils seront disponibles pour consultation sur place. Ils constituent des sources précieuses pour l’histoire de cette nation et témoignent de leur présence et de leurs activités dans les années qui ont précédé l’arrivée des Européens et à l’époque de la Nouvelle-France.
+                    </p>
+                </div>
+                
+                <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeLangloisModal()" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium shadow-sm">
+                        Fermer la fenêtre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SPÉCIFIQUE POUR FERNAND HARVEY (CARTE 3) -->
+    <div id="harvey-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
+            <button onclick="closeHarveyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Photo associée verticalement à Gauche -->
+            <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[300px] md:min-h-full">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1e_wbEEB3vxqVniMLEseoNaTUt7cRrV54');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-4 left-4 bg-blue-700 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fernand Harvey</span>
+            </div>
+
+            <!-- Texte descriptif à Droite -->
+            <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+                        <i class="fa-solid fa-award"></i> Distinction académique
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">
+                        Hommage à la contribution scientifique de Fernand Harvey
+                    </h3>
+                    <div class="w-12 h-0.5 bg-gold-400"></div>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                        Notre collègue Fernand Harvey a récemment contribué à la biographie d’Athanase David dans le cadre du Dictionnaire biographique du Canada. 
+                        <a href="https://www.biographi.ca/fr/bio/david_athanase_18F.html" target="_blank" rel="noopener noreferrer" class="text-burgundy-800 hover:text-gold-600 inline-flex items-center gap-1 font-semibold ml-1 underline transition-colors">
+                            <span>Accéder au texte</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                        La journaliste Karine Gagnon retrace également le parcours académique et professionnel de Fernand dans cet article éloquent, tout en soulignant l’apport de Fernand Dumont à sa propre pratique sociologique. 
+                        <a href="https://www.journaldequebec.com/2026/09/29/une-rencontre-determinante-avec-lun-des-peres-de-la-loi-101" target="_blank" rel="noopener noreferrer" class="text-burgundy-800 hover:text-gold-600 inline-flex items-center gap-1 font-semibold ml-1 underline transition-colors">
+                            <span>Accéder au texte</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </p>
+                    <p class="text-xs text-gray-500 italic pt-2">
+                        &copy; Photo : Stevens LeBlanc
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeHarveyModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SCRIPTS JAVASCRIPT LOGIQUE ET INTERACTION -->
     <script>
         // Gestion des sous-menus de la barre latérale
@@ -793,7 +921,6 @@
             titleEl.innerText = title;
             synopsisEl.innerText = synopsis;
             
-            // Ajout du paramètre autoplay pour lancer la lecture directement
             let finalSrc = videoSrc;
             if (finalSrc) {
                 finalSrc += finalSrc.includes('?') ? '&autoplay=1' : '?autoplay=1';
@@ -807,9 +934,35 @@
             const modal = document.getElementById('video-modal');
             const iframe = document.getElementById('modal-video-iframe');
 
-            // Vider la source de l'iframe arrête instantanément la lecture vidéo en arrière-plan
             iframe.src = '';
             modal.classList.add('hidden');
+        }
+
+        // Gestion de la modale dédiée à Chantal Savoie (Carte 1)
+        function openChantalModal() {
+            document.getElementById('chantal-modal').classList.remove('hidden');
+        }
+
+        function closeChantalModal() {
+            document.getElementById('chantal-modal').classList.add('hidden');
+        }
+
+        // Gestion de la modale dédiée à Simon Langlois / Wendat (Carte 2)
+        function openLangloisModal() {
+            document.getElementById('langlois-modal').classList.remove('hidden');
+        }
+
+        function closeLangloisModal() {
+            document.getElementById('langlois-modal').classList.add('hidden');
+        }
+
+        // Gestion de la modale dédiée à Fernand Harvey (Carte 3)
+        function openHarveyModal() {
+            document.getElementById('harvey-modal').classList.remove('hidden');
+        }
+
+        function closeHarveyModal() {
+            document.getElementById('harvey-modal').classList.add('hidden');
         }
     </script>
 </body>
