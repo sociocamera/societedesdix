@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-[#fcfbf9]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Société des Dix - Fondée en 1935</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts Google : Cormorant Garamond & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            50: '#fdf2f4',
+                            100: '#fbe5e9',
+                            700: '#8b2035',
+                            800: '#6b1d2f',
+                            900: '#4a121e',
+                        },
+                        gold: {
+                            400: '#d4af37',
+                            500: '#c59b27',
+                            600: '#aa820a',
+                        },
+                        academic: {
+                            bg: '#fcfbf9',
+                            card: '#ffffff',
+                            text: '#2c2a29',
+                            muted: '#656260',
+                            border: '#e8e5e0'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Masquer la barre de défilement pour le carrousel Netflix */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .academic-shadow {
+            box-shadow: 0 4px 20px -2px rgba(107, 29, 47, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .gold-gradient-border {
+            border-image: linear-gradient(to right, #d4af37, #6b1d2f) 1;
+        }
+
+        /* Animation de transition douce pour les vues */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="h-full font-sans text-academic-text bg-academic-bg flex overflow-hidden antialiased">
+
+    <!-- BARRE LATÉRALE FIXE A GAUCHE -->
+    <aside id="sidebar" class="w-80 bg-white border-r border-academic-border flex flex-col justify-between shrink-0 h-full z-30 transition-all duration-300 relative shadow-sm">
+        
+        <!-- Haut de la Sidebar : Logo & En-tête -->
+        <div class="flex flex-col">
+            <!-- Branding / Logo -->
+            <div class="p-6 border-b border-academic-border flex flex-col items-center text-center bg-[#fdfcfb]">
+                <div class="w-16 h-16 rounded-full bg-burgundy-800 text-gold-400 flex items-center justify-center font-serif text-2xl font-bold mb-3 shadow-md border-2 border-gold-400/40">
+                    X
+                </div>
+                <h1 class="font-serif text-2xl font-bold tracking-tight text-burgundy-800">Société des Dix</h1>
+                <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mt-1">Depuis 1935</p>
+                <div class="w-12 h-0.5 bg-gold-400 mt-2 opacity-60"></div>
+            </div>
+
+            <!-- Navigation Principale -->
+            <nav class="p-4 overflow-y-auto max-h-[calc(100vh-250px)] space-y-1 text-sm">
+                <!-- Accueil -->
+                <button onclick="switchTab('accueil', 'Accueil')" class="nav-item active w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg font-medium transition-colors text-burgundy-800 bg-burgundy-50 border-l-4 border-burgundy-800">
+                    <i class="fa-solid font-normal fa-house w-5 text-center text-burgundy-800"></i>
+                    <span>Accueil</span>
+                </button>
+
+                <!-- Menu Déroulant: Société des Dix -->
+                <div class="space-y-1">
+                    <button onclick="toggleSubmenu('sub-societe')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-building-columns w-5 text-center text-gray-500"></i>
+                            <span>Société des Dix</span>
+                        </div>
+                        <i id="sub-societe-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="sub-societe" class="hidden pl-9 pr-2 space-y-1 text-xs">
+                        <button onclick="switchTab('historique', 'Historique depuis 1935')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Historique depuis 1935</button>
+                        <button onclick="switchTab('societe-2026', 'La Société des Dix en 2026')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">La Société des Dix en 2026</button>
+                        <button onclick="switchTab('membres', 'Membres émérites et associés')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Membres émérites et associés</button>
+                        <button onclick="switchTab('prix', 'Le prix des Dix')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Le prix des Dix</button>
+                        <button onclick="switchTab('amis', 'Les amis des Dix')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Les amis des Dix</button>
+                    </div>
+                </div>
+
+                <!-- Menu Déroulant: Les Cahiers des Dix -->
+                <div class="space-y-1">
+                    <button onclick="toggleSubmenu('sub-cahiers')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-book-bookmark w-5 text-center text-gray-500"></i>
+                            <span>Les Cahiers des Dix</span>
+                        </div>
+                        <i id="sub-cahiers-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="sub-cahiers" class="hidden pl-9 pr-2 space-y-1 text-xs">
+                        <button onclick="switchTab('dernier-numero', 'Dernier numéro des Cahiers')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Dernier numéro (N° 79)</button>
+                        <button onclick="switchTab('archives', 'Numéros numérisés (1936 à aujourd\'hui)')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Numéros numérisés : 1936 à aujourd'hui</button>
+                        <button onclick="switchTab('index', 'Index généraux')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Index généraux</button>
+                        <button onclick="switchTab('commande', 'Bon de commande')" class="w-full text-left py-2 px-2.5 rounded hover:bg-gray-100 text-gray-600 hover:text-burgundy-800">Bon de commande</button>
+                    </div>
+                </div>
+
+                <!-- La recherche des Dix -->
+                <button onclick="switchTab('chroniques', 'La recherche des Dix (Chroniques)')" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-feather-pointed w-5 text-center text-gray-500"></i>
+                    <span>La recherche des Dix</span>
+                </button>
+
+                <!-- Événements -->
+                <button onclick="switchTab('evenements', 'Événements académiques')" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-calendar-days w-5 text-center text-gray-500"></i>
+                    <span>Événements</span>
+                </button>
+
+                <!-- Vidéos -->
+                <button onclick="switchTab('videos-section', 'Vidéos & Conférences')" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-circle-play w-5 text-center text-gray-500"></i>
+                    <span>Vidéos</span>
+                </button>
+
+                <!-- Nous joindre -->
+                <button onclick="switchTab('joindre', 'Nous joindre')" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-envelope w-5 text-center text-gray-500"></i>
+                    <span>Nous joindre</span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Bas de la Sidebar : Bouton Nous rejoindre -->
+        <div class="p-4 border-t border-academic-border bg-[#fdfcfb]">
+            <button onclick="openJoinModal()" class="w-full py-3 px-4 bg-burgundy-800 hover:bg-burgundy-900 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group text-sm">
+                <i class="fa-solid fa-user-plus text-gold-400 group-hover:scale-110 transition-transform"></i>
+                <span>Nous rejoindre</span>
+            </button>
+            <p class="text-[11px] text-center text-academic-muted mt-2">Recherches en histoire du Québec & d'Amérique française</p>
+        </div>
+    </aside>
+
+    <!-- ZONE DE CONTENU PRINCIPALE -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- BARRE FIXE EN HAUT (Header) -->
+        <header class="h-16 bg-white border-b border-academic-border px-8 flex items-center justify-between shrink-0 shadow-sm z-20">
+            <div class="flex items-center gap-4">
+                <span id="current-page-title" class="font-serif text-2xl font-bold text-burgundy-800 tracking-wide">
+                    Accueil
+                </span>
+                <span class="hidden md:inline-block text-xs bg-burgundy-50 text-burgundy-800 border border-burgundy-200 px-2.5 py-0.5 rounded-full font-medium">
+                    Société d'histoire et d'érudition
+                </span>
+            </div>
+
+            <!-- Actions du Header -->
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <input type="text" placeholder="Rechercher dans les travaux..." class="pl-9 pr-4 py-1.5 text-xs bg-gray-50 border border-academic-border rounded-full w-48 focus:w-64 focus:bg-white focus:outline-none focus:border-burgundy-800 transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-xs"></i>
+                </div>
+                <button class="p-2 text-gray-500 hover:text-burgundy-800 rounded-full hover:bg-gray-100 transition-colors">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- ESPACE DE CONTENU DYNAMIQUE -->
+        <main class="flex-1 overflow-y-auto p-6 md:p-8 space-y-10" id="main-content">
+            
+            <!-- SECTION ACCUEIL (Par défaut) -->
+            <div id="view-accueil" class="space-y-10 fade-in">
+                
+                <!-- BANNÈRE D'ACCUEIL / INTRODUCTIONS -->
+                <div class="relative rounded-2xl bg-gradient-to-r from-burgundy-900 via-burgundy-800 to-gray-900 text-white p-8 md:p-10 shadow-lg overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 text-white font-serif font-bold text-9xl select-none">1935</div>
+                    <div class="relative z-10 max-w-3xl space-y-3">
+                        <div class="inline-flex items-center gap-2 text-gold-400 text-xs uppercase font-semibold tracking-widest bg-black/20 px-3 py-1 rounded-full border border-gold-400/20">
+                            <i class="fa-solid fa-landmark"></i> Histoire & Patrimoine du Québec
+                        </div>
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold leading-tight">Consacrer les études historiques et préserver la mémoire</h2>
+                        <p class="text-gray-200 text-sm md:text-base font-light leading-relaxed">
+                            Depuis près d'un siècle, les dix membres-chercheurs de la Société des Dix publient annuellement les travaux originaux sur l'histoire de la Nouvelle-France, du Québec et de l'Amérique française.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 1. CONTAINER "NOUVELLES RÉCENTES" -->
+                <section class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
+                        <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
+                            <i class="fa-solid fa-newspaper text-gold-500 text-lg"></i>
+                            Nouvelles récentes
+                        </h3>
+                        <a href="#" onclick="switchTab('chroniques', 'Nouvelles')" class="text-xs font-semibold text-burgundy-800 hover:text-gold-600 flex items-center gap-1 transition-colors">
+                            Voir toutes les nouvelles <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Carte 1 -->
+                        <article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="inline-block px-2.5 py-1 bg-burgundy-50 text-burgundy-800 text-[11px] font-semibold rounded mb-3">Nomination</span>
+                                    <h4 class="font-serif text-xl font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors leading-snug">
+                                        Nomination de Chantal Savoie au Fauteuil #1
+                                    </h4>
+                                    <p class="text-xs text-academic-muted mt-2 leading-relaxed">
+                                        La Société a le plaisir d’annoncer l’élection de la professeure et historienne Chantal Savoie pour occuper le prestigieux premier fauteuil de la Société.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                                    <span>15 octobre 2026</span>
+                                    <span class="text-burgundy-800 font-semibold group-hover:translate-x-1 transition-transform">Lire plus &rarr;</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Carte 2 -->
+                        <article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="inline-block px-2.5 py-1 bg-amber-50 text-amber-800 text-[11px] font-semibold rounded mb-3">Archives & Don</span>
+                                    <h4 class="font-serif text-xl font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors leading-snug">
+                                        Don exceptionnel des archives Wendat par Simon Langlois
+                                    </h4>
+                                    <p class="text-xs text-academic-muted mt-2 leading-relaxed">
+                                        Un lot inestimable de documents inédits traitant des relations territoriales au XVIIIe siècle rejoint les collections d'étude des Dix.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                                    <span>28 septembre 2026</span>
+                                    <span class="text-burgundy-800 font-semibold group-hover:translate-x-1 transition-transform">Lire plus &rarr;</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Carte 3 -->
+                        <article class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="inline-block px-2.5 py-1 bg-blue-50 text-blue-800 text-[11px] font-semibold rounded mb-3">Distinction académique</span>
+                                    <h4 class="font-serif text-xl font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors leading-snug">
+                                        Hommage à la contribution scientifique de Fernand Harvey
+                                    </h4>
+                                    <p class="text-xs text-academic-muted mt-2 leading-relaxed">
+                                        Retour sur la séance solennelle soulignant le cinquantenaire de recherche du chercheur émérite en sociologie culturelle du Québec.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                                    <span>10 septembre 2026</span>
+                                    <span class="text-burgundy-800 font-semibold group-hover:translate-x-1 transition-transform">Lire plus &rarr;</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 2. CONTAINER "PUBLICATIONS DES CAHIERS DES DIX" -->
+                <section class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
+                        <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
+                            <i class="fa-solid fa-book text-gold-500 text-lg"></i>
+                            Publications des Cahiers des Dix
+                        </h3>
+                        <a href="#" onclick="switchTab('archives', 'Les Cahiers')" class="text-xs font-semibold text-burgundy-800 hover:text-gold-600 flex items-center gap-1 transition-colors">
+                            Consulter l'index complet (1936-2026) <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-academic-border p-6 md:p-8 academic-shadow">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <!-- Couverture et badge -->
+                            <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                                <div class="relative w-48 h-64 bg-burgundy-900 rounded-r-lg shadow-2xl flex flex-col justify-between p-5 text-white border-l-8 border-gold-400 group hover:scale-105 transition-transform duration-300">
+                                    <div class="border-b border-gold-400/40 pb-2">
+                                        <p class="text-[10px] tracking-widest text-gold-400 uppercase font-bold">Société des Dix</p>
+                                        <p class="font-serif text-xs font-semibold text-gray-200">Volume 79</p>
+                                    </div>
+                                    <div class="my-auto text-center">
+                                        <h4 class="font-serif text-xl font-bold text-gold-400 leading-tight">Les Cahiers des Dix</h4>
+                                        <p class="text-[11px] text-gray-300 italic mt-1">Édition Annuelle</p>
+                                    </div>
+                                    <div class="text-right text-[10px] text-gray-400 border-t border-gold-400/40 pt-2">
+                                        Éditions La Liberté
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Détails de la Parution -->
+                            <div class="lg:col-span-8 space-y-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-gold-500/10 text-gold-600 text-xs font-bold px-3 py-1 rounded-full border border-gold-500/30">Dernier Numéro Récent</span>
+                                    <span class="text-xs text-gray-500">Parution de la fin d'année</span>
+                                </div>
+                                <h4 class="font-serif text-3xl font-bold text-burgundy-800">Cahier N° 79 : Érudition et Regards Croisés</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Ce volume rassemble neuf études originales inédites approfondissant des aspects inédits du patrimoine littéraire, politique et matériel du Québec. Chaque étude a fait l'objet d'un examen rigoureux par les pairs.
+                                </p>
+                                
+                                <div class="space-y-2 pt-2">
+                                    <p class="text-xs font-bold text-gray-700 uppercase tracking-wider">Articles vedettes au sommaire :</p>
+                                    <ul class="text-xs text-gray-600 space-y-1.5 pl-4 list-disc">
+                                        <li><strong class="text-gray-800">Gilles Gallichan :</strong> <i>Imprimeurs et liberté de presse au Bas-Canada (1806-1837)</i></li>
+                                        <li><strong class="text-gray-800">Yvan Lamonde :</strong> <i>Les réseaux de correspondances intellectuelles entre Montréal et Paris</i></li>
+                                        <li><strong class="text-gray-800">Laurier Turgeon :</strong> <i>Patrimoine immatériel et récits de marins en Nouvelle-France</i></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pt-4 flex flex-wrap gap-4">
+                                    <button onclick="switchTab('dernier-numero', 'Achat Cahier 79')" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors flex items-center gap-2">
+                                        <i class="fa-solid fa-cart-shopping text-gold-400"></i> Commander ce numéro (35 $)
+                                    </button>
+                                    <button onclick="switchTab('archives', 'Numéros numérisés')" class="px-5 py-2.5 bg-white border border-academic-border hover:bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold transition-colors flex items-center gap-2">
+                                        <i class="fa-solid fa-file-pdf text-burgundy-800"></i> Sommaire Érudit (PDF)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. SLIDER DE TYPE NETFLIX ("VIDÉOS & CONFÉRENCES") -->
+                <section class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
+                                <i class="fa-solid fa-film text-gold-500 text-lg"></i>
+                                Vidéos & Conférences des Dix
+                            </h3>
+                            <p class="text-xs text-academic-muted">Entretiens exclusifs, leçons inaugurales et présentations de recherches</p>
+                        </div>
+                        <!-- Boutons de contrôle carrousel -->
+                        <div class="flex items-center gap-2">
+                            <button onclick="scrollNetflixSlider(-1)" class="w-9 h-9 rounded-full bg-white border border-academic-border hover:bg-burgundy-800 hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Précédent">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="scrollNetflixSlider(1)" class="w-9 h-9 rounded-full bg-white border border-academic-border hover:bg-burgundy-800 hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Suivant">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Carrousel de cartes horizontal -->
+                    <div id="netflix-slider" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1">
+                        
+                        <!-- Video Card 1 -->
+                        <div class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                            <div class="relative h-44 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Conférence</span>
+                                <span class="absolute bottom-3 right-3 bg-black/70 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i> 45:20
+                                </span>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
+                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 space-y-1.5">
+                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Aux origines de la Nouvelle-France</h4>
+                                <p class="text-xs text-gray-500">Par l'historien membre Gilles Gallichan</p>
+                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Retour analytique sur les documents fondateurs conservés dans les dépôts d'archives de Québec et de Paris.</p>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 2 -->
+                        <div class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                            <div class="relative h-44 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                                <span class="absolute top-3 left-3 bg-gold-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Entretien</span>
+                                <span class="absolute bottom-3 right-3 bg-black/70 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i> 28:15
+                                </span>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
+                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 space-y-1.5">
+                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Le fauteuil #5 : Héritage et transmission</h4>
+                                <p class="text-xs text-gray-500">Table ronde animée par les Sociétaires</p>
+                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Discussion autour du rôle de la Société dans le paysage historiographique québécois contemporain.</p>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 3 -->
+                        <div class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                            <div class="relative h-44 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Symposium</span>
+                                <span class="absolute bottom-3 right-3 bg-black/70 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i> 58:00
+                                </span>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
+                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 space-y-1.5">
+                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Histoire intellectuelle du XIXe siècle</h4>
+                                <p class="text-xs text-gray-500">Présenté par Yvan Lamonde</p>
+                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Exploration des mouvements d'idées et des imprimés dans le Bas-Canada du milieu du XIXe siècle.</p>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 4 -->
+                        <div class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                            <div class="relative h-44 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                                <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Remise de Prix</span>
+                                <span class="absolute bottom-3 right-3 bg-black/70 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i> 32:40
+                                </span>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
+                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 space-y-1.5">
+                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Cérémonie du Prix des Dix 2025</h4>
+                                <p class="text-xs text-gray-500">Séance solennelle annuelle</p>
+                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Remise officielle du prix récompensant une contribution remarquable à l'histoire du Québec.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 4. CONTAINER "NOUVELLES DU DERNIER MOIS" -->
+                <section class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
+                        <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-gold-500 text-lg"></i>
+                            Nouvelles du dernier mois
+                        </h3>
+                        <span class="text-xs font-medium text-gray-500">Filtre : Octobre - Novembre 2026</span>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-academic-border p-6 academic-shadow divide-y divide-gray-100">
+                        <!-- Item Fil d'actualité 1 -->
+                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="space-y-1 max-w-3xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">04 Nov 2026</span>
+                                    <span class="text-xs text-gray-400">• Séance privée</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
+                                    Tenue de la séance d'automne au Musée de la civilisation
+                                </h4>
+                                <p class="text-xs text-academic-muted">
+                                    Les membres de la Société des Dix se sont réunis à Québec pour entamer l'évaluation des manuscrits destinés au Cahier N° 80.
+                                </p>
+                            </div>
+                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
+                                Communiqué <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Item Fil d'actualité 2 -->
+                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="space-y-1 max-w-3xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">22 Oct 2026</span>
+                                    <span class="text-xs text-gray-400">• Partenariat Érudit</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
+                                    Mise en ligne des numéros 70 à 75 sur la plateforme Érudit
+                                </h4>
+                                <p class="text-xs text-academic-muted">
+                                    L'accessibilité numérique des travaux de la Société s'enrichit avec la mise en libre accès de six nouveaux volumes historiques.
+                                </p>
+                            </div>
+                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
+                                Accéder <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Item Fil d'actualité 3 -->
+                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="space-y-1 max-w-3xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">12 Oct 2026</span>
+                                    <span class="text-xs text-gray-400">• Appel à candidatures</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
+                                    Ouverture des candidatures pour le Prix des Dix 2027
+                                </h4>
+                                <p class="text-xs text-academic-muted">
+                                    Le comité d'attribution invite les étudiants au doctorat et les chercheurs indépendants à soumettre leurs dossiers avant le 31 janvier.
+                                </p>
+                            </div>
+                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
+                                Directives <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- VUE DYNAMIQUE GÉNÉRIQUE POUR LES AUTRES PAGES DU MENU -->
+            <div id="view-generic" class="hidden fade-in space-y-6">
+                <div class="bg-white rounded-2xl border border-academic-border p-8 academic-shadow">
+                    <h2 id="generic-title" class="font-serif text-3xl font-bold text-burgundy-800 mb-4">Titre de la Section</h2>
+                    <div class="w-16 h-1 bg-gold-400 mb-6"></div>
+                    <div class="prose max-w-none text-gray-700 space-y-4 text-sm leading-relaxed" id="generic-content">
+                        <p>Contenu en cours de chargement pour cette section académique de la Société des Dix...</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- MODAL "NOUS REJOINDRE / DEVENIR MEMBRE OU AMIS" -->
+    <div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl border border-academic-border max-w-lg w-full p-6 md:p-8 space-y-6 shadow-2xl relative animate-in fade-in zoom-in-95">
+            <button onclick="closeJoinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-burgundy-50 text-burgundy-800 rounded-full flex items-center justify-center mx-auto text-xl">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-burgundy-800">Rejoindre la Société des Dix</h3>
+                <p class="text-xs text-academic-muted">Soutenez la recherche historique et la publication des Cahiers</p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Nom complet</label>
+                    <input type="text" required placeholder="Dr. / Mme / M." class="w-full px-3 py-2 border border-academic-border rounded-lg focus:outline-none focus:border-burgundy-800">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Adresse courriel</label>
+                    <input type="email" required placeholder="exemple@institution.ca" class="w-full px-3 py-2 border border-academic-border rounded-lg focus:outline-none focus:border-burgundy-800">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Type d'engagement</label>
+                    <select class="w-full px-3 py-2 border border-academic-border rounded-lg focus:outline-none focus:border-burgundy-800 bg-white">
+                        <option>Devenir un « Ami des Dix » (Soutien annuel)</option>
+                        <option>S'abonner aux Cahiers des Dix</option>
+                        <option>Proposer un article / Soumission chercheur</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Message ou affiliation académique (optionnel)</label>
+                    <textarea rows="3" placeholder="Présentez brièvement vos travaux d'intérêt..." class="w-full px-3 py-2 border border-academic-border rounded-lg focus:outline-none focus:border-burgundy-800"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-burgundy-800 hover:bg-burgundy-900 text-white font-semibold rounded-lg shadow-md transition-colors">
+                    Envoyer ma demande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS JAVASCRIPT LOGIQUE ET INTERACTION -->
+    <script>
+        // Gestion des sous-menus de la barre latérale
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                submenu.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Défilement carrousel Netflix Vidéos
+        function scrollNetflixSlider(direction) {
+            const slider = document.getElementById('netflix-slider');
+            const scrollAmount = 320;
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Basculement dynamique des vues / sections de page
+        function switchTab(viewId, pageTitle) {
+            // Mettre à jour le titre du Header fixe
+            document.getElementById('current-page-title').innerText = pageTitle;
+
+            const accueilView = document.getElementById('view-accueil');
+            const genericView = document.getElementById('view-generic');
+            const genericTitle = document.getElementById('generic-title');
+            const genericContent = document.getElementById('generic-content');
+
+            if (viewId === 'accueil') {
+                accueilView.classList.remove('hidden');
+                genericView.classList.add('hidden');
+            } else {
+                accueilView.classList.add('hidden');
+                genericView.classList.remove('hidden');
+                genericTitle.innerText = pageTitle;
+
+                // Génération de contenu fictif académique selon la section sélectionnée
+                genericContent.innerHTML = `
+                    <p class="text-base font-serif italic text-burgundy-800 border-l-2 border-gold-400 pl-4 my-4">
+                        Section officielle : ${pageTitle}
+                    </p>
+                    <p>
+                        La <strong>Société des Dix</strong> rassemble dix chercheurs autonomes et passionnés par les études historiques du Québec et de l'Amérique française. Fondée en 1935 par Gérard Malchelosse, Aegidius Fauteux et leurs confrères, elle poursuit son travail d'érudition à travers des réunions de travail régulières et la parution annuelle de ses fameux <em>Cahiers</em>.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <div class="p-4 bg-gray-50 rounded-lg border border-academic-border">
+                            <h5 class="font-serif font-bold text-burgundy-800 mb-1">Ressources & Archives</h5>
+                            <p class="text-xs text-gray-600">Accès direct aux index documentaires, articles numérisés et monographies des sociétaires.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-academic-border">
+                            <h5 class="font-serif font-bold text-burgundy-800 mb-1">Séances d'étude</h5>
+                            <p class="text-xs text-gray-600">Présentation des découvertes historiographiques récentes et échanges critiques.</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Remonter en haut de la zone de contenu
+            document.getElementById('main-content').scrollTop = 0;
+        }
+
+        // Modal "Nous rejoindre"
+        function openJoinModal() {
+            document.getElementById('join-modal').classList.remove('hidden');
+        }
+
+        function closeJoinModal() {
+            document.getElementById('join-modal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert("Merci de votre intérêt envers la Société des Dix. Votre demande a bien été transmise à notre secrétariat.");
+            closeJoinModal();
+        }
+    </script>
+</body>
+</html>
