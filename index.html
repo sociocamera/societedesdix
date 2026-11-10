@@ -275,7 +275,7 @@
                             </div>
                         </article>
 
-                        <!-- Carte 3 (Rendue cliquable pour ouvrir la modale Fernand Harvey) -->
+                        <!-- Carte 3 -->
                         <article onclick="openHarveyModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1ZfRKiCGNIfczi8DwW0DW1ksgxRgRNkPL');"></div>
@@ -314,7 +314,7 @@
 
                     <div class="bg-white rounded-2xl border border-academic-border p-6 md:p-8 academic-shadow">
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                            <!-- Couverture et badge (Image Google Drive) -->
+                            <!-- Couverture et badge -->
                             <div class="lg:col-span-4 flex flex-col items-center justify-center">
                                 <div class="relative w-48 h-64 rounded-lg shadow-2xl overflow-hidden border-2 border-gold-400/50 group hover:scale-105 transition-transform duration-300 bg-gray-900">
                                     <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank"><img src="https://lh3.googleusercontent.com/d/1NLdBTzB6ko-LT9DlwJ_Sqt2MAMPpj6jC" alt="Couverture Les Cahiers des Dix" class="w-full h-full object-cover"></a>
@@ -335,16 +335,20 @@
                                 <div class="space-y-2 pt-2">
                                     <p class="text-xs font-bold text-gray-700 uppercase tracking-wider">Articles vedettes au sommaire :</p>
                                     <ul class="text-xs text-gray-600 space-y-1.5 pl-4 list-disc">
-                                        <li><strong class="text-gray-800">Gilles Gallichan :</strong> <i>Imprimeurs et liberté de presse au Bas-Canada (1806-1837)</i></li>
-                                        <li><strong class="text-gray-800">Yvan Lamonde :</strong> <i>Les réseaux de correspondances intellectuelles entre Montréal et Paris</i></li>
-                                        <li><strong class="text-gray-800">Laurier Turgeon :</strong> <i>Patrimoine immatériel et récits de marins en Nouvelle-France</i></li>
+                                        <li><strong class="text-gray-800">Gilles Gallichan :</strong> <i>Pascal-Joseph Verbist (1829-1879), premier curé de Sainte-Pétronille (Île d’Orléans)</i></li>
+                                        <li><strong class="text-gray-800">Fernand Harvey :</strong> <i>Denis Vaugeois, un ministre des Affaires culturelles sous le radar (1979-1981)</i></li>
+                                        <li><strong class="text-gray-800">Simon Langlois :</strong> <i>La société démocratique de participation de Gérald Fortin</i></li>
                                     </ul>
                                 </div>
 
                                 <div class="pt-4 flex flex-wrap gap-4">
                                     <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
-                                        <i class="fa-solid fa-cart-shopping text-gold-400"></i> Commander ce numéro (35 $)
+                                        <i class="fa-solid fa-cart-shopping text-gold-400"></i> Commander ce numéro (3,95 $)
                                     </a>
+                                    <a href="https://laliberte.leslibraires.ca/auteurs/societe-des-dix-590859?sort=date_published" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-book text-gold-500 text-lg"></i> Tous les numéros
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -374,13 +378,15 @@
 
                     <!-- Carrousel de cartes horizontal -->
                     <div id="netflix-slider" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1">
+
+
                         
                         <!-- Video Card 1 -->
                         <div onclick="openVideoModal('Christian - Présentation', 'https://drive.google.com/file/d/1DbZarBy6JumAvxs3_-DLe2FQ08Ouy1KL/preview', 'Introduction et ouverture de la session de recherche et des réflexions de la Société des Dix.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
                             <div class="relative h-44 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1n3Yb-ppS7WydFoVDYlKwuTyGVStaYVEZ');"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Conférence</span>
+                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Présentation</span>
                                 <div class="absolute inset-0 flex items-center justify-center">
                                     <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
                                         <i class="fa-solid fa-play text-sm pl-0.5"></i>
@@ -393,6 +399,27 @@
                                 <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Introduction et ouverture de la session de recherche et des réflexions de la Société des Dix.</p>
                             </div>
                         </div>
+
+                        <!-- Video Card 7 -->
+                        <div onclick="openVideoModal('L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)', 'https://drive.google.com/file/d/1k2dn10elwx5kZlGHEiCZROdvZUOCaYde/preview', 'Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
+                            <div class="relative h-44 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1yYjgtOBqthYC9J0X2RkmMdlKL09K74Bb');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Patrimoine Local</span>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
+                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 space-y-1.5">
+                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)</h4>
+                                <p class="text-xs text-gray-500">Chronique régionale</p>
+                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.</p>
+                            </div>
+                        </div>
+
+
 
                         <!-- Video Card 2 -->
                         <div onclick="openVideoModal('Alfred Maugard et la vie théâtrale à Québec en 1871', 'https://drive.google.com/file/d/1SK5DUMWsoMeYoSCazvF780InAgV468_J/preview', 'Exploration de la vie théâtrale à Québec en 1871 à travers les archives et les contributions d’Alfred Maugard.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
@@ -489,24 +516,6 @@
                             </div>
                         </div>
 
-                        <!-- Video Card 7 -->
-                        <div onclick="openVideoModal('L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)', 'https://drive.google.com/file/d/1k2dn10elwx5kZlGHEiCZROdvZUOCaYde/preview', 'Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1yYjgtOBqthYC9J0X2RkmMdlKL09K74Bb');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Patrimoine Local</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)</h4>
-                                <p class="text-xs text-gray-500">Chronique régionale</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.</p>
-                            </div>
-                        </div>
 
                         <!-- Video Card 8 -->
                         <div onclick="openVideoModal('Marie Pournin de La Faye : une histoire des femmes oubliées', 'https://drive.google.com/file/d/1wdROD1WbSJ4NH51shlshso-2LL3VxxQl/preview', 'Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure souvent négligée mais essentielle dans l\'établissement de Montréal au XVIIe siècle. Sa longue existence s\'étend sur tout le siècle et illustre les conditions ambiguës auxquelles devaient faire face les femmes pionnières de la colonie.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
@@ -607,7 +616,155 @@
                     <h2 id="generic-title" class="font-serif text-3xl font-bold text-burgundy-800 mb-4">Titre de la Section</h2>
                     <div class="w-16 h-1 bg-gold-400 mb-6"></div>
                     <div class="prose max-w-none text-gray-700 space-y-4 text-sm leading-relaxed" id="generic-content">
-                        <p>Contenu en cours de chargement pour cette section académique de la Société des Dix...</p>
+                        <!-- Le contenu s'injectera ici dynamiquement -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- VUE SPÉCIFIQUE : LA SOCIÉTÉ DES DIX EN 2026 (10 cases sur deux lignes) -->
+            <div id="view-societe-2026" class="hidden fade-in space-y-6">
+                <div class="bg-white rounded-2xl border border-academic-border p-8 academic-shadow">
+                    <div class="max-w-3xl mb-8">
+                        <span class="text-xs uppercase font-semibold tracking-widest text-gold-600 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Composition actuelle</span>
+                        <h2 class="font-serif text-3xl font-bold text-burgundy-800 mt-2">La Société des Dix en 2026</h2>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Découvrez les dix membres actuels de la Société occupant les fauteuils en ordre numérique croissant. Cliquez sur un membre pour consulter sa biographie détaillée.
+                        </p>
+                    </div>
+
+                    <!-- Grille de 10 cases : 2 lignes de 5 colonnes -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        
+                        <!-- Fauteuil 1 -->
+                        <div onclick="openMembreModal(1)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 1</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Chantal Savoie</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 1</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 2 -->
+                        <div onclick="openMembreModal(2)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/13tA8zohfl0zAwjM0o4iox5swL8GHoAXK?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 2</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Jean-François Palomino</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 2</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 3 -->
+                        <div onclick="openMembreModal(3)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1MmA0CmIUWD4r3Ai5MKpuCO8AKEgWlE8T?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 3</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Christian Blais</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 3</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 4 -->
+                        <div onclick="openMembreModal(4)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Sxofsji6vaZ7881OIvHcwalhendxI76Z?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 4</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Denys Delage</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 4</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 5 -->
+                        <div onclick="openMembreModal(5)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1GqUX0fplaeQyNj8sCFzx7TA4_eoozGOO?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 5</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Jacques Des Rochers</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 5</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 6 -->
+                        <div onclick="openMembreModal(6)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/18bCDdim7E0mlJRjMezb6X4qB1Ny7RC5K?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 6</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Lucie Robert</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 6</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 7 -->
+                        <div onclick="openMembreModal(7)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1_kWiRb8HH2k24RpRPjjKXeuMqdqo3PkU?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 7</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Jocelyne Mathieu</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 7</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 8 -->
+                        <div onclick="openMembreModal(8)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1jfps6jVty-H078bpk-JuVID-z4qJIVqp?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 8</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Louise Pothier</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 8</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 9 -->
+                        <div onclick="openMembreModal(9)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Kr7mis6M0ZDgAm1csJ6Yqv1ROyW2deDC?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 9</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Louis-Georges Harvey</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 9</p>
+                            </div>
+                        </div>
+
+                        <!-- Fauteuil 10 -->
+                        <div onclick="openMembreModal(10)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
+                            <div class="relative h-48 bg-gray-900 overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1rpl3xNu6xh85o6h4B_WOVOBXSZG-uIQL?auto=format&fit=crop&q=80&w=500');"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute top-2.5 left-2.5 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Fauteuil 10</span>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h3 class="font-serif font-bold text-gray-900 group-hover:text-burgundy-800 transition-colors text-base">Dominique Deslandres</h3>
+                                <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 10</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -615,7 +772,7 @@
         </main>
     </div>
 
-    <!-- MODAL "NOUS REJOINDRE / DEVENIR MEMBRE OU AMIS" -->
+    <!-- MODAL "NOUS REJOINDRE" -->
     <div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl border border-academic-border max-w-lg w-full p-6 md:p-8 space-y-6 shadow-2xl relative animate-in fade-in zoom-in-95">
             <button onclick="closeJoinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-lg">
@@ -658,19 +815,17 @@
         </div>
     </div>
 
-    <!-- MODAL LECTEUR VIDÉO AVEC IFRAME ET SYNOPSIS -->
+    <!-- MODAL LECTEUR VIDÉO -->
     <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-5xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
             <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl z-20 bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <!-- Player Vidéo (Iframe) à Gauche -->
             <div class="w-full md:w-3/5 bg-black flex items-center justify-center relative aspect-video md:aspect-auto">
                 <iframe id="modal-video-iframe" class="w-full h-full min-h-[350px] md:min-h-[450px]" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
 
-            <!-- Zone de texte avec le synopsis à Droite -->
             <div class="w-full md:w-2/5 p-6 md:p-8 flex flex-col justify-between bg-gray-900 text-gray-100 space-y-4">
                 <div class="space-y-4">
                     <span class="inline-block px-3 py-1 bg-burgundy-800/80 text-gold-400 text-[11px] font-bold rounded uppercase tracking-wider">Synopsis officiel</span>
@@ -690,21 +845,53 @@
         </div>
     </div>
 
-    <!-- MODAL SPÉCIFIQUE POUR LA NOMINATION DE CHANTAL SAVOIE (CARTE 1) -->
+    <!-- MODAL MEMBRES (Dynamique pour la Société en 2026) -->
+    <div id="membre-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
+            <button onclick="closeMembreModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
+                <div id="membre-modal-img" class="absolute inset-0 bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span id="membre-modal-badge" class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil</span>
+            </div>
+
+            <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+                        <i class="fa-solid fa-landmark"></i> Membre titulaire
+                    </div>
+                    <h3 id="membre-modal-name" class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nom du Membre</h3>
+                    <div class="w-12 h-0.5 bg-gold-400"></div>
+                    <p id="membre-modal-bio" class="text-sm text-gray-700 leading-relaxed text-justify">
+                        Biographie du membre...
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeMembreModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CHANTAL SAVOIE -->
     <div id="chantal-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
             <button onclick="closeChantalModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <!-- Photo associée à Gauche -->
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 <span class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil #1 - Chantal Savoie</span>
             </div>
 
-            <!-- Texte biographique à Droite -->
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
@@ -731,14 +918,13 @@
         </div>
     </div>
 
-    <!-- MODAL SPÉCIFIQUE POUR LE DON WENDAT DE SIMON LANGLOIS (CARTE 2) -->
+    <!-- MODAL SIMON LANGLOIS -->
     <div id="langlois-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
             <button onclick="closeLangloisModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <!-- Photo associée affichée intégralement dans le haut de la fenêtre modale -->
             <div class="w-full h-64 md:h-80 bg-gray-900 relative shrink-0">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1pk9CzLPVGu28cs3fgY0B8b8HSf1EiC3l');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -748,7 +934,6 @@
                 </div>
             </div>
 
-            <!-- Texte complet à défilement dans le bas -->
             <div class="p-6 md:p-8 flex-1 overflow-y-auto space-y-6 text-academic-text">
                 <div class="space-y-4 text-sm text-gray-700 leading-relaxed text-justify">
                     <p>
@@ -775,21 +960,19 @@
         </div>
     </div>
 
-    <!-- MODAL SPÉCIFIQUE POUR FERNAND HARVEY (CARTE 3) -->
+    <!-- MODAL FERNAND HARVEY -->
     <div id="harvey-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
             <button onclick="closeHarveyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <!-- Photo associée verticalement à Gauche -->
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[300px] md:min-h-full">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1e_wbEEB3vxqVniMLEseoNaTUt7cRrV54');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 <span class="absolute bottom-4 left-4 bg-blue-700 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fernand Harvey</span>
             </div>
 
-            <!-- Texte descriptif à Droite -->
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
@@ -827,9 +1010,121 @@
         </div>
     </div>
 
-    <!-- SCRIPTS JAVASCRIPT LOGIQUE ET INTERACTION -->
+    <!-- SCRIPTS JAVASCRIPT -->
     <script>
-        // Gestion des sous-menus de la barre latérale
+        // Données des 10 membres pour la fenêtre modale
+        const membresData = {
+            1: {
+                nom: "Chantal Savoie",
+                fauteuil: "Fauteuil #1",
+                img: "https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz",
+bio: `* Fauteuil précédemment occupé par Simon Langlois (2007), Pierre Trépanier (1988), Philippe Sylvain (1969), Gérard Malchelosse (1935).
+
+Chantal Savoie est professeure au Département d’études littéraires de l’UQAM, membre du Centre de recherche interuniversitaire sur la littérature et la culture au Québec (CRILCQ) et titulaire de la Chaire de recherche en histoire culturelle de pratiques non dominantes (CRC). Spécialiste de l’histoire littéraire et culturelle des femmes et de la culture de grande consommation, elle fait partie depuis vingt-cinq ans du collectif La vie littéraire au Québec, dont elle cosigne les tomes V, VI, VII (sous presse) et VIII (en préparation) parus aux Presses de l’Université Laval.
+
+        Chantal Savoie signe en outre la monographie Les femmes de lettres canadiennes-françaises au tournant du XXe siècle (2014), en plus d’avoir coordonné la publication de nombreux numéros de revues savantes et ouvrages collectifs. Elle dirige depuis 2023 la collection « La petite culture » aux Presses de l’Université de Montréal. Tout au long de son parcours, Chantal Savoie s’est impliquée dans la recherche collective et dans la création et la gestion d’infrastructures de recherche majeures.`
+            },
+            2: {
+                nom: "Jean-François Palomino",
+                fauteuil: "Fauteuil #2",
+                img: "https://lh3.googleusercontent.com/d/13tA8zohfl0zAwjM0o4iox5swL8GHoAXK?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Victor Morin (1935), Louis-Philippe Audet (1959), Lucien Campeau (1973), Mireille Barrière (1998), Yvan Lamonde (2000), Andrée Fortin (2015).
+
+Professeur au Département d’histoire de l’Université du Québec à Montréal, Jean-François Palomino est spécialiste de la cartographie de la Nouvelle-France. Détenteur d’un doctorat en histoire à l’Université de Montréal, il se mérite en 2019 le prix Louise-Dechêne de l’Institut d’histoire de l’Amérique française. Membre de la Commission de toponymie du Québec et du Centre de recherche interuniversitaire sur les humanités numériques, il a occupé les postes de cartothécaire et de coordonnateur à Bibliothèque et Archives nationales du Québec entre 2000 et 2023. Dans ces fonctions, il a contribué à l’enrichissement et à la valorisation des collections patrimoniales, tout en développant des projets de recherche et de diffusion numérique. Avec Raymonde Litalien et Denis Vaugeois, il est co-auteur du livre La mesure d’un continent : atlas historique de l’Amérique du Nord, 1492-1814, récipiendaire du prix Marcel-Couture et du prix Hercule-Catenacci. Il publie en 2026 aux éditions Boréal le livre Cartographier la Nouvelle-France : le savoir géographique au service de l’État (1534-1744).`
+            },
+            3: {
+                nom: "Christian Blais",
+                fauteuil: "Fauteuil #3",
+                img: "https://lh3.googleusercontent.com/d/1MmA0CmIUWD4r3Ai5MKpuCO8AKEgWlE8T?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Gilles Gallichan (1993), Luc Lacourcière (1967), Léo-Paul Desrosiers (1941), Ægidius Fauteux (1935).
+
+Christian Blais est originaire de Carleton-sur-Mer, en Gaspésie. Diplômé en histoire à l’Université de Montréal et à l’Université Laval. Depuis 2002, il est historien à la Bibliothèque de l’Assemblée nationale, où il a notamment travaillé au programme de reconstitution des débats parlementaires antérieurs à 1963. Il est membre de la Société des Dix depuis 2019.
+
+Spécialiste de l’histoire politique et parlementaire du XVIIIe siècle, ses recherches sur le Québec couvrent également l’époque de la Nouvelle-France ainsi que l’État libéral moderne depuis le XIXe siècle jusqu’à nos jours.`
+            },
+            4: {
+                nom: "Denys Delâge",
+                fauteuil: "Fauteuil #4",
+                img: "https://lh3.googleusercontent.com/d/1Sxofsji6vaZ7881OIvHcwalhendxI76Z?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Roger Le Moine (1988), Raymond Douville (1948), É.-Z. Massicotte (1935).
+
+Denys Delage est membre de la Société des Dix depuis décembre 2004. Historien et sociologue rattaché au département de sociologie de l’Université Laval, il est reconnu pour la qualité de ses travaux sur l’histoire des Amérindiens et sur les réseaux d’alliance franco et anglo amérindiens dans l’est de l’Amérique du Nord aux XVIIe et XVIIIIe siècles.
+
+Il détient une licence en histoire de l’Université de Montréal (1965), une maîtrise en sociologie de la même université (1968) et un doctorat en histoire de l’École des Hautes Études en Sciences Sociales de l’Université de Paris I (1981), réalisé sous la direction d’Emmanuel Le Roy Ladurie.
+
+Son ouvrage, Le Pays renversé, Amérindiens et Européens en Amérique du Nord-Est 1600-1664 (Éditions du Boréal, 1985 et 1991), également paru en anglais chez UBC Press, lui a mérité de prix Lionel-Groulx du meilleur livre d’histoire (1986) et le prix John-Porter du meilleur livre canadien en sciences sociales. Mentionnons également un ouvrage dont il est coauteur avec Jean-Pierre Sawaya : Les traités des Sept-Feux avec les Britanniques : droits et pièges d’un héritage colonial au Québec (Septentrion, 2001). Il a publié de nombreux articles dans diverses revues dont Recherches Amérindiennes au Québec. On y trouve notamment une histoire du commerce dans le village huron de Wendake (Lorette) et deux articles sur la Grande Paix de 1701. Ses recherches en cours portent sur les dynamiques foncière, scolaire et judiciaire dans les rapports entre Européens et Amérindiens.`
+            },
+            5: {
+                nom: "Jacques Des Rochers",
+                fauteuil: "Fauteuil #5",
+                img: "https://lh3.googleusercontent.com/d/1GqUX0fplaeQyNj8sCFzx7TA4_eoozGOO?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Laurier Lacroix (2005), Claude Galarneau (1978), Jean-Charles Bonenfant (1963), Jean Bruchési (1943), Francis-J. Audet (1935).
+
+Jacques Des Rochers est conservateur principal de l’art québécois et canadien au Musée des beaux-arts de Montréal depuis 2023, après avoir été conservateur de l’art québécois et canadien avant 1945, depuis 2002. Il a développé le concept d’exposition des collections dont il est responsable au nouveau pavillon Claire et Marc Bourgie, inauguré en 2011, et dirigé à cette occasion la première publication d’envergure dédiée à ce corpus.  Il a été commissaire de plusieurs expositions, notamment L’Héritage artistique des Sulpiciens de Montréal (2007). Plus récemment, il a été co-commissaire de l’exposition et co-directeur de la publication Une modernité des années vingt. Montréal. Le Groupe de Beaver Hall (2015), de même que Riopelle. À la rencontre des territoires nordiques et des cultures autochtones (2020).Ses projets ont été plusieurs fois primés.`
+            },
+            6: {
+                nom: "Lucie Robert",
+                fauteuil: "Fauteuil #6",
+                img: "https://lh3.googleusercontent.com/d/18bCDdim7E0mlJRjMezb6X4qB1Ny7RC5K?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Olivier Maurault  (1935), Armand Yon (1966), Pierre Savard (1979), Bernard Andrès (1999).
+
+« La langue est la métaphore de l’histoire ». Lucie Robert, vous le savez, est ma collègue au Département d’Études littéraires de l’UQAM. Elle y fut même ma directrice durant quelques années. Un département où nous avons elle et moi enseigné les Lettres et la dramaturgie québécoises, mais aussi la sociocritique. C’est dire que nos intérêts académiques ont toujours convergé et qu’ils se recoupent encore. C’est pourquoi je me réjouis aujourd’hui de lui passer le relais à la Société des Dix, en vous adressant ces quelques mots de présentation.
+
+Lucie a été formée à l’Université Laval où ses études doctorales ont porté sur le Manuel d’histoire littéraire de Camille Roy et sur l’institution littéraire au Québec. Elle a reçu deux fois le Prix Raymond-Klibansky, d’abord pour la publication de sa thèse, puis, en collaboration, pour sa participation au premier tome de La Vie littéraire au Québec. Ce tome, placé sous la direction de Maurice Lemire, portait sur ma période de prédilection : 1764-1805. Il est paru en 1991, à l’époque où je lançais moi-même le chantier de l’Archéologie du littéraire au Québec.
+
+Fidèle artisane du vaste projet La Vie littéraire au Québec, initié par l’Université Laval, Lucie a co-dirigé avec Denis Saint-Jacques le tome V (sur le tournant du XXe s). Avant même La Vie littéraire au Québec, Lucie collaborait déjà au projet antérieur du Dictionnaire des œuvres littéraires du Québec (tomes 2 à 5, 8, 9).
+
+Dans La Vie littéraire Lucie est responsable des sections sur les Biographies, l’histoire (comme genre littéraire), la vie théâtrale et les textes dramatiques. J’ajoute que, spécialiste de la dramaturgie québécoise, Lucie tient avec application, depuis plus de 30 ans, la chronique « Dramaturgie », dans Voix et images. Vous l’avez peut-être aussi entendu ses chroniques de dramaturgie à Radio-Canada.
+
+Ce qu’on sait moins, car c’est secret (j’ai mes renseignements!), c’est que Lucie a fourni dans l’ombre (sans signature) la majeure partie des chapitres sur l’Éloquence religieuse, les Satires, les Pamphlets et la Polémique au XIXe siècle. Actuellement, elle s’occupe des radioromans, des causeries radiophoniques et de la Littérature jeunesse. Bientôt viendra, en plus de ces sujets, la littérature télévisuelle avec le prochain tome de La vie littéraire: 1948-1962.
+
+Spécialiste du XIXe siècle québécois, mais aussi de la première moitié du XXe, Lucie s’intéresse à l’histoire littéraire des femmes, mais, plus largement, aux Lettres et à la scène québécoises (en théâtre, elle « couvre » aussi toute la production contemporaine). Elle a dirigé d’importants projets subventionnés, dont le fameux CRILCQ (Centre interuniversitaire de recherche sur la littérature et la culture québécoises). Durant ces 10 dernières années, elle a aussi animé deux projets CRSH, l’un sur l’Histoire de la vie artistique au Québec de la fin du XIXe siècle à la Deuxième guerre mondiale, et l’autre sur la vie artistique au Québec (1895-1948).  
+
+Dans le domaine de l’édition, outre la revue Voix et images qu’elle a dirigé avec brio, Lucie a travaillé sur le roman Charles Guérin de Pierre-Joseph-Olivier Chauveau. Elle a également consacré de nombreux articles et chapitres de livres à Philippe Aubert de Gaspé, Henri-Raymond Casgrain, Pierre-Joseph-Olivier Chauveau, Octave Crémazie, Joseph Quesnel, Laure Conan, Louis Fréchette et François-Xavier Garneau (notamment dans un ouvrage codirigé par Gilles Gallichan en 1998).`
+            },
+            7: {
+                nom: "Jocelyne Mathieu",
+                fauteuil: "Fauteuil #7",
+                img: "https://lh3.googleusercontent.com/d/1_kWiRb8HH2k24RpRPjjKXeuMqdqo3PkU?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé  par Jean Simard (1991), Benoît Lacroix (1982), Robert-Lionel Séguin (1963), Antoine Roy (1953),
+Pierre Georges Roy (1935)
+
+Jocelyne Mathieu est détentrice d’un doctorat en ethnologie de l’École des hautes études en sciences sociales de Paris et professeure titulaire en ethnologie du Québec et des francophones en Amérique du Nord au Département des sciences historiques à la Faculté des lettres et des sciences humaines de l’Université Laval à Québec. Comme professeure-chercheure, elle s’intéresse à la culture matérielle et aux coutumes, notamment en ce qui touche le costume et le textile, la vie domestique et quotidienne, les manières d’habiter, les arts populaires. Elle porte une attention toute spéciale à la vie des femmes, dans leurs témoignages oraux et écrits, entre autres dans la littérature personnelle. Directrice de plusieurs recherches de maitrise et de doctorat, l’Université Laval lui a décerné en 2014 un prix d’excellence en enseignement, volet «Encadrement aux cycles supérieurs», pour la qualité de sa supervision et la reconnaissance des étudiants diplômés. Elle a aussi été appelée à occuper plusieurs fonctions universitaires, notamment comme vice-doyenne aux études à la Faculté des lettres (1995-1997), adjointe au vice-rectorat aux études (1997-1999) et présidente de la Commission des études de l’Université Laval (1999-2007). Elle est membre de la Société des Dix depuis 2000.`
+            },
+            8: {
+                nom: "Louise Pothier",
+                fauteuil: "Fauteuil #8",
+                img: "https://lh3.googleusercontent.com/d/1jfps6jVty-H078bpk-JuVID-z4qJIVqp?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Fernand Harvey (1997), Guy-Marie Oury (1983), Séraphin Marion (1962), Albert Tessier (1935).
+
+Conservatrice et archéologue en chef à Pointe-à-Callière, cité d’archéologie et d’histoire de Montréal, Louise Pothier oeuvre en interprétation du patrimoine depuis plus de 25 ans. Cofondatrice et directrice de la revue québécoise d’archéologie Mémoires vives (1992-1996), elle a également publié plusieurs textes dans des revues d’archéologie et d’histoire et des ouvrages collectifs.
+
+Après une dizaine d’années comme chargée de projets en exposition à Pointe-à-Callière, elle est maintenant responsable du volet archéologie et conservation dans le cadre du projet d’expansion du Musée, notamment pour la mise en valeur du Fort de Ville-Marie et pour les travaux de recherches archéologiques menés sur le site du marché Sainte-Anne/Parlement de la province du Canada. Elle dirige la collection « Archéologie du Québec », produite par Pointe-à-Callière en partenariat avec le ministère de la Culture et des Communications, éditée par les Éditions de l’Homme. En 2019, elle a reçu le prix des Dix décerné par la Société des Dix pour souligner son engagement dans la recherche et sa contribution à l’histoire de Montréal et du Québec. La Société historique de Montréal a également remis sa médaille 2019 à Louise Pothier et son équipe d’archéologues à Pointe-à-Callière pour leur contribution à l’histoire de Montréal.`
+            },
+            9: {
+                nom: "Louis-Georges Harvey",
+                fauteuil: "Fauteuil #9",
+                img: "https://lh3.googleusercontent.com/d/1Kr7mis6M0ZDgAm1csJ6Yqv1ROyW2deDC?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Marcel Moussette (1997), André Vachon (1970), Jacques Rousseau (1951), Aristide-Beaugrand-Champagne (1935).
+
+Louis-Georges Harvey est professeur titulaire au Département d’histoire de l’Université Bishop. Il y enseigne notamment l’histoire du Québec et des États-Unis, ainsi que l’histoire des Amériques dans une perspective comparative. Spécialiste de l’histoire politique et de l’histoire culturelle, il a publié de nombreux articles sur la diffusion de l’imprimé en Amérique au XVIIIe et XIXe siècle et sur le discours politique au Québec et aux États-Unis avant 1840.
+
+Son ouvrage Le Printemps de l’Amérique française, Américanité, anticolonialisme et républicanisme dans le discours politique québécois, 1805-1837 (Boréal, 2005) a contesté les interprétations dominantes du mouvement patriote. Il travaille actuellement sur le discours politique des Anglophones du Bas-Canada.`
+            },
+            10: {
+                nom: "Dominique Deslandres",
+                fauteuil: "Fauteuil #10",
+                img: "https://lh3.googleusercontent.com/d/1rpl3xNu6xh85o6h4B_WOVOBXSZG-uIQL?auto=format&fit=crop&q=80&w=500",
+                bio: `* Fauteuil précédemment occupé par Marie-Thérèse Lefebvre (2002), Michel Lessard (1994), André Sévigny (1988), Sylvio LeBlond (1969), Léon Trépanier (1954), Maréchal Nantel (1940), Montarville Boucher de la Bruère (1935).
+
+La Société des Dix a accueilli en novembre 2017 Dominique Deslandres en remplacement de Marie-Thérèse Lefebvre, devenue membre émérite.
+
+Professeure titulaire au Département d’histoire de l’Université de Montréal, elle consacre ses travaux à l’histoire comparée des mentalités socioreligieuses d’Europe et d’Amérique à l’époque moderne. Ses recherches portent aussi sur l’histoire comparée de la construction identitaire aux 16e-18e  siècles en Europe et en Amérique.
+
+Parmi plusieurs publications de Dominique Deslandres, signalons son ouvrage Croire et faire croire. Les missions françaises au 17e siècle (Paris, Fayard, 2003) qui démontre les liens profonds unissant la perception de l’altérité et les représentations de l’identité moderne dans le contexte de la première mondialisation que constitue l’impérialisme missionnaire alors même que la France subissait une véritable colonisation interne. Elle rédige en ce moment une biographie de Marie Guyart de l’Incarnation, fondatrice du tout premier établissement d’enseignement féminin en Amérique, tout en poursuivant ses travaux sur les rôles des sexes, de la religion et de la politique dans l’histoire de l’expansion française moderne.`
+            }
+        };
+
         function toggleSubmenu(id) {
             const submenu = document.getElementById(id);
             const icon = document.getElementById(id + '-icon');
@@ -843,7 +1138,6 @@
             }
         }
 
-        // Défilement carrousel Netflix Vidéos
         function scrollNetflixSlider(direction) {
             const slider = document.getElementById('netflix-slider');
             const scrollAmount = 320;
@@ -853,50 +1147,45 @@
             });
         }
 
-        // Basculement dynamique des vues / sections de page
         function switchTab(viewId, pageTitle) {
-            // Mettre à jour le titre du Header fixe
             document.getElementById('current-page-title').innerText = pageTitle;
 
             const accueilView = document.getElementById('view-accueil');
             const genericView = document.getElementById('view-generic');
+            const societe2026View = document.getElementById('view-societe-2026');
             const genericTitle = document.getElementById('generic-title');
             const genericContent = document.getElementById('generic-content');
 
+            // Masquer toutes les vues principales
+            accueilView.classList.add('hidden');
+            genericView.classList.add('hidden');
+            societe2026View.classList.add('hidden');
+
             if (viewId === 'accueil') {
                 accueilView.classList.remove('hidden');
-                genericView.classList.add('hidden');
+            } else if (viewId === 'societe-2026') {
+                societe2026View.classList.remove('hidden');
             } else {
-                accueilView.classList.add('hidden');
                 genericView.classList.remove('hidden');
                 genericTitle.innerText = pageTitle;
 
-                // Génération de contenu fictif académique selon la section sélectionnée
+                // Injection dynamique de texte par défaut pour les autres onglets
                 genericContent.innerHTML = `
-                    <p class="text-base font-serif italic text-burgundy-800 border-l-2 border-gold-400 pl-4 my-4">
-                        Section officielle : ${pageTitle}
+                    <p class="text-sm leading-relaxed text-gray-700 text-justify">
+                        Fondée en 1935, la Société des Dix était à l’origine une académie d’historiens québécois intéressés par la recherche sur l’Amérique française. La Société a accueilli au fil des ans des spécialistes de diverses disciplines – archivistes, littéraires, musiciens, archéologues, sociologues, etc. – intéressés par l’histoire. Depuis l’Antiquité, les académies ont souvent retenu le nombre de dix membres comme idéal au sein d’un groupe, afin de varier les points de vue et permettre à tous de s’exprimer. Notre société s’inscrit dans cette longue tradition.
                     </p>
-                    <p>
-                        La <strong>Société des Dix</strong> rassemble dix chercheurs autonomes et passionnés par les études historiques du Québec et de l'Amérique française. Fondée en 1935 par Gérard Malchelosse, Aegidius Fauteux et leurs confrères, elle poursuit son travail d'érudition à travers des réunions de travail régulières et la parution annuelle de ses fameux <em>Cahiers</em>.
+                    <p class="text-sm leading-relaxed text-gray-700 text-justify">
+                        Les membres de la Société des Dix sont choisis par cooptation. Ils sont élus à vie, mais ils peuvent se retirer librement. Depuis sa création, la Société a accueilli plus de 50 spécialistes qui ont occupé les différents Fauteuils.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                        <div class="p-4 bg-gray-50 rounded-lg border border-academic-border">
-                            <h5 class="font-serif font-bold text-burgundy-800 mb-1">Ressources & Archives</h5>
-                            <p class="text-xs text-gray-600">Accès direct aux index documentaires, articles numérisés et monographies des sociétaires.</p>
-                        </div>
-                        <div class="p-4 bg-gray-50 rounded-lg border border-academic-border">
-                            <h5 class="font-serif font-bold text-burgundy-800 mb-1">Séances d'étude</h5>
-                            <p class="text-xs text-gray-600">Présentation des découvertes historiographiques récentes et échanges critiques.</p>
-                        </div>
-                    </div>
+                    <p class="text-sm leading-relaxed text-gray-700 text-justify">
+                        Les Dix font connaître leurs travaux dans <em>Les Cahiers des Dix</em>, un recueil annuel existant depuis 1936. Les Cahiers sont publiés par les Éditions La Liberté de Québec. La Société des Dix n’est soutenue par aucune subvention et les Amis des Dix apportent une contribution non négligeable à son rayonnement. La Société remet chaque année le Prix des Dix qui honore une personne qui a œuvré, souvent dans l’ombre, à la connaissance historique sur l’Amérique française.
+                    </p>
                 `;
             }
 
-            // Remonter en haut de la zone de contenu
             document.getElementById('main-content').scrollTop = 0;
         }
 
-        // Modal "Nous rejoindre"
         function openJoinModal() {
             document.getElementById('join-modal').classList.remove('hidden');
         }
@@ -911,7 +1200,6 @@
             closeJoinModal();
         }
 
-        // Gestion de la modale vidéo avec iframe et lecture automatique
         function openVideoModal(title, videoSrc, synopsis) {
             const modal = document.getElementById('video-modal');
             const iframe = document.getElementById('modal-video-iframe');
@@ -938,7 +1226,22 @@
             modal.classList.add('hidden');
         }
 
-        // Gestion de la modale dédiée à Chantal Savoie (Carte 1)
+        function openMembreModal(id) {
+            const membre = membresData[id];
+            if (!membre) return;
+
+            document.getElementById('membre-modal-name').innerText = membre.nom;
+            document.getElementById('membre-modal-badge').innerText = membre.fauteuil;
+            document.getElementById('membre-modal-img').style.backgroundImage = `url('${membre.img}')`;
+            document.getElementById('membre-modal-bio').innerText = membre.bio;
+
+            document.getElementById('membre-modal').classList.remove('hidden');
+        }
+
+        function closeMembreModal() {
+            document.getElementById('membre-modal').classList.add('hidden');
+        }
+
         function openChantalModal() {
             document.getElementById('chantal-modal').classList.remove('hidden');
         }
@@ -947,7 +1250,6 @@
             document.getElementById('chantal-modal').classList.add('hidden');
         }
 
-        // Gestion de la modale dédiée à Simon Langlois / Wendat (Carte 2)
         function openLangloisModal() {
             document.getElementById('langlois-modal').classList.remove('hidden');
         }
@@ -956,7 +1258,6 @@
             document.getElementById('langlois-modal').classList.add('hidden');
         }
 
-        // Gestion de la modale dédiée à Fernand Harvey (Carte 3)
         function openHarveyModal() {
             document.getElementById('harvey-modal').classList.remove('hidden');
         }
