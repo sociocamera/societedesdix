@@ -47,7 +47,6 @@
         }
     </script>
     <style>
-        /* Masquer la barre de défilement pour le carrousel Netflix */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -60,11 +59,6 @@
             box-shadow: 0 4px 20px -2px rgba(107, 29, 47, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
         }
 
-        .gold-gradient-border {
-            border-image: linear-gradient(to right, #d4af37, #6b1d2f) 1;
-        }
-
-        /* Animation de transition douce pour les vues */
         .fade-in {
             animation: fadeIn 0.3s ease-in-out forwards;
         }
@@ -81,7 +75,6 @@
         
         <!-- Haut de la Sidebar : Logo & En-tête -->
         <div class="flex flex-col">
-            <!-- Branding / Logo -->
             <div class="p-6 border-b border-academic-border flex flex-col items-center text-center bg-[#fdfcfb]">
                 <div class="w-16 h-16 rounded-full bg-burgundy-800 text-gold-400 flex items-center justify-center font-serif text-2xl font-bold mb-3 shadow-md border-2 border-gold-400/40">
                     X
@@ -184,7 +177,6 @@
                 </span>
             </div>
 
-            <!-- Actions du Header -->
             <div class="flex items-center gap-3">
                 <div class="relative">
                     <input type="text" placeholder="Rechercher dans les travaux..." class="pl-9 pr-4 py-1.5 text-xs bg-gray-50 border border-academic-border rounded-full w-48 focus:w-64 focus:bg-white focus:outline-none focus:border-burgundy-800 transition-all">
@@ -202,7 +194,7 @@
             <!-- SECTION ACCUEIL (Par défaut) -->
             <div id="view-accueil" class="space-y-10 fade-in">
                 
-                <!-- BANNÈRE D'ACCUEIL / INTRODUCTIONS -->
+                <!-- BANNÈRE D'ACCUEIL -->
                 <div class="relative rounded-2xl bg-gradient-to-r from-burgundy-900 via-burgundy-800 to-gray-900 text-white p-8 md:p-10 shadow-lg overflow-hidden">
                     <div class="absolute right-4 -bottom-4 opacity-5 text-white font-serif font-bold text-9xl select-none pointer-events-none">1935</div>
                     <div class="relative z-10 max-w-3xl space-y-3">
@@ -216,7 +208,7 @@
                     </div>
                 </div>
 
-                <!-- 1. CONTAINER "NOUVELLES RÉCENTES" -->
+                <!-- 1. NOUVELLES RÉCENTES -->
                 <section class="space-y-4">
                     <div class="flex items-center justify-between border-b border-academic-border pb-3">
                         <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
@@ -229,7 +221,6 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Carte 1 -->
                         <article onclick="openChantalModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
@@ -252,7 +243,6 @@
                             </div>
                         </article>
 
-                        <!-- Carte 2 -->
                         <article onclick="openLangloisModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1pk9CzLPVGu28cs3fgY0B8b8HSf1EiC3l');"></div>
@@ -275,7 +265,6 @@
                             </div>
                         </article>
 
-                        <!-- Carte 3 -->
                         <article onclick="openHarveyModal()" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/50 transition-all flex flex-col group cursor-pointer">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1ZfRKiCGNIfczi8DwW0DW1ksgxRgRNkPL');"></div>
@@ -300,7 +289,7 @@
                     </div>
                 </section>
 
-                <!-- 2. CONTAINER "PUBLICATIONS DES CAHIERS DES DIX" -->
+                <!-- 2. CAHIERS DES DIX -->
                 <section class="space-y-4">
                     <div class="flex items-center justify-between border-b border-academic-border pb-3">
                         <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
@@ -314,14 +303,12 @@
 
                     <div class="bg-white rounded-2xl border border-academic-border p-6 md:p-8 academic-shadow">
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                            <!-- Couverture et badge -->
                             <div class="lg:col-span-4 flex flex-col items-center justify-center">
                                 <div class="relative w-48 h-64 rounded-lg shadow-2xl overflow-hidden border-2 border-gold-400/50 group hover:scale-105 transition-transform duration-300 bg-gray-900">
                                     <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank"><img src="https://lh3.googleusercontent.com/d/1NLdBTzB6ko-LT9DlwJ_Sqt2MAMPpj6jC" alt="Couverture Les Cahiers des Dix" class="w-full h-full object-cover"></a>
                                 </div>
                             </div>
 
-                            <!-- Détails de la Parution -->
                             <div class="lg:col-span-8 space-y-4">
                                 <div class="flex items-center gap-2">
                                     <span class="bg-gold-500/10 text-gold-600 text-xs font-bold px-3 py-1 rounded-full border border-gold-500/30">Dernier Numéro Récent</span>
@@ -332,290 +319,114 @@
                                     Ce volume rassemble neuf études originales inédites approfondissant des aspects inédits du patrimoine littéraire, politique et matériel du Québec. Chaque étude a fait l'objet d'un examen rigoureux par les pairs.
                                 </p>
                                 
-                                <div class="space-y-2 pt-2">
-                                    <p class="text-xs font-bold text-gray-700 uppercase tracking-wider">Articles vedettes au sommaire :</p>
-                                    <ul class="text-xs text-gray-600 space-y-1.5 pl-4 list-disc">
-                                        <li><strong class="text-gray-800">Gilles Gallichan :</strong> <i>Pascal-Joseph Verbist (1829-1879), premier curé de Sainte-Pétronille (Île d’Orléans)</i></li>
-                                        <li><strong class="text-gray-800">Fernand Harvey :</strong> <i>Denis Vaugeois, un ministre des Affaires culturelles sous le radar (1979-1981)</i></li>
-                                        <li><strong class="text-gray-800">Simon Langlois :</strong> <i>La société démocratique de participation de Gérald Fortin</i></li>
-                                    </ul>
-                                </div>
-
                                 <div class="pt-4 flex flex-wrap gap-4">
                                     <a href="https://laliberte.leslibraires.ca/livres/cahiers-des-dix-9782890849792" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
                                         <i class="fa-solid fa-cart-shopping text-gold-400"></i> Commander ce numéro (3,95 $)
                                     </a>
-                                    <a href="https://laliberte.leslibraires.ca/auteurs/societe-des-dix-590859?sort=date_published" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg text-xs font-semibold shadow-md transition-colors inline-flex items-center gap-2">
-                                        <i class="fa-solid fa-book text-gold-500 text-lg"></i> Tous les numéros
-                                    </a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <!-- 3. SLIDER DE TYPE NETFLIX ("VIDÉOS & CONFÉRENCES") -->
-                <section class="space-y-4">
-                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
-                                <i class="fa-solid fa-film text-gold-500 text-lg"></i>
-                                Vidéos des Dix
-                            </h3>
-                            <p class="text-xs text-academic-muted">Entretiens exclusifs, leçons inaugurales et présentations de recherches</p>
-                        </div>
-                        <!-- Boutons de contrôle carrousel -->
-                        <div class="flex items-center gap-2">
-                            <button onclick="scrollNetflixSlider(-1)" class="w-9 h-9 rounded-full bg-white border border-academic-border hover:bg-burgundy-800 hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Précédent">
-                                <i class="fa-solid fa-chevron-left text-xs"></i>
-                            </button>
-                            <button onclick="scrollNetflixSlider(1)" class="w-9 h-9 rounded-full bg-white border border-academic-border hover:bg-burgundy-800 hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Suivant">
-                                <i class="fa-solid fa-chevron-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Carrousel de cartes horizontal -->
-                    <div id="netflix-slider" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1">
-                        <!-- Video Card 1 -->
-                        <div onclick="openVideoModal('Christian - Présentation', 'https://drive.google.com/file/d/1DbZarBy6JumAvxs3_-DLe2FQ08Ouy1KL/preview', 'Introduction et ouverture de la session de recherche et des réflexions de la Société des Dix.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1n3Yb-ppS7WydFoVDYlKwuTyGVStaYVEZ');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Présentation</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Christian - Ouverture</h4>
-                                <p class="text-xs text-gray-500">Séance inaugurale</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Introduction et ouverture de la session de recherche et des réflexions de la Société des Dix.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 7 -->
-                        <div onclick="openVideoModal('L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)', 'https://drive.google.com/file/d/1k2dn10elwx5kZlGHEiCZROdvZUOCaYde/preview', 'Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1yYjgtOBqthYC9J0X2RkmMdlKL09K74Bb');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Patrimoine Local</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">L’aventure du premier curé de Sainte-Pétronille (Île d’Orléans)</h4>
-                                <p class="text-xs text-gray-500">Chronique régionale</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Récit historique et humain centré sur l’établissement et l’aventure spirituelle du tout premier curé de Sainte-Pétronille à l’Île d’Orléans.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 2 -->
-                        <div onclick="openVideoModal('Alfred Maugard et la vie théâtrale à Québec en 1871', 'https://drive.google.com/file/d/1SK5DUMWsoMeYoSCazvF780InAgV468_J/preview', 'Exploration de la vie théâtrale à Québec en 1871 à travers les archives et les contributions d’Alfred Maugard.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/14SZ6Q7Urt2X45UhNnghAvo5c6l_cjK8P');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-gold-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Entretien</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Alfred Maugard et la vie théâtrale à Québec en 1871</h4>
-                                <p class="text-xs text-gray-500">Histoire culturelle</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Exploration de la vie théâtrale à Québec en 1871 à travers les archives et les contributions d’Alfred Maugard.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 3 -->
-                        <div onclick="openVideoModal('La saga des tableaux des Stations du chemin de croix de l’église Notre-Dame de Montréal', 'https://drive.google.com/file/d/1ZNwPBHdS4T6GaZ_E9D8hdzxJAaEL57m-/preview', 'Analyse artistique et historique de la saga entourant les tableaux des Stations du chemin de croix de l’église Notre-Dame de Montréal.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Y8-W5CjXLVaYwz23QsO-OhLTsWKaZjyL');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Symposium</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">La saga des tableaux des Stations du chemin de croix de l’église Notre-Dame de Montréal</h4>
-                                <p class="text-xs text-gray-500">Patrimoine religieux</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Analyse artistique et historique de la saga entourant les tableaux des Stations du chemin de croix de l’église Notre-Dame de Montréal.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 4 -->
-                        <div onclick="openVideoModal('Les lois de 1836 : la dernière communion des Patriotes et des Bureaucrates', 'https://drive.google.com/file/d/1ZPzYe3naPuUvD4GI0QOVH5e8xhSzdj83/preview', 'Étude politique et historique sur les lois de 1836 et les tensions de l’époque entre Patriotes et Bureaucrates.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1TWFnAUokvsSzcm4ArVoehztK6vwNhUbe');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Histoire Politique</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Les lois de 1836 : la dernière communion des Patriotes et des Bureaucrates</h4>
-                                <p class="text-xs text-gray-500">Conférence historique</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Étude politique et historique sur les lois de 1836 et les tensions de l’époque entre Patriotes et Bureaucrates.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 5 -->
-                        <div onclick="openVideoModal('La société de participation : la grande utopie des années 60-70', 'https://drive.google.com/file/d/1x_L-t3UI1nwh5Aqx0c1NK5jhpMINub-p/preview', 'Retour critique sur le concept de société de participation, considérée comme la grande utopie des mouvements sociaux des années 1960-1970.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1QZ3Tu0fdqdaVhxQxT_Q8erBje78kAEC_');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-burgundy-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Sociologie</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">La société de participation : la grande utopie des années 60-70</h4>
-                                <p class="text-xs text-gray-500">Séminaire sociologique</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Retour critique sur le concept de société de participation, considérée comme la grande utopie des mouvements sociaux des années 1960-1970.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 6 -->
-                        <div onclick="openVideoModal('Cartographier la route atlantique entre France et Nouvelle-France : de Cartier à Champlain', 'https://drive.google.com/file/d/1XgMDL2rcwvvqXD8quZoVqp4TbkRnSv9o/preview', 'Épopée cartographique et maritime retraçant les traversées de l’Atlantique de Jacques Cartier jusqu’à Samuel de Champlain.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1kM7tMry0vZgRnu4AT4IWZV0ExUdlgtXm');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-gold-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Histoire Maritime</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Cartographier la route atlantique entre France et Nouvelle-France : de Cartier à Champlain</h4>
-                                <p class="text-xs text-gray-500">Conférence magistrale</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Épopée cartographique et maritime retraçant les traversées de l’Atlantique de Jacques Cartier jusqu’à Samuel de Champlain.</p>
-                            </div>
-                        </div>
-
-                        <!-- Video Card 8 -->
-                        <div onclick="openVideoModal('Marie Pournin de La Faye : une histoire des femmes oubliées', 'https://drive.google.com/file/d/1wdROD1WbSJ4NH51shlshso-2LL3VxxQl/preview', 'Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure souvent négligée mais essentielle dans l\'établissement de Montréal au XVIIe siècle. Sa longue existence s\'étend sur tout le siècle et illustre les conditions ambiguës auxquelles devaient faire face les femmes pionnières de la colonie.')" class="shrink-0 w-72 md:w-80 bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow group hover:scale-[1.03] transition-all duration-300 cursor-pointer">
-                            <div class="relative h-44 bg-gray-900 overflow-hidden">  
-                                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Hkm5ctrbPj37Z8yx4MrpPS6ZTsWpEQic');"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                                <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Documentaire</span>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-12 h-12 rounded-full bg-burgundy-800/90 text-gold-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-gold-400/40">
-                                        <i class="fa-solid fa-play text-sm pl-0.5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-4 space-y-1.5">
-                                <h4 class="font-serif font-bold text-gray-900 text-base group-hover:text-burgundy-800 transition-colors line-clamp-1">Marie Pournin de La Faye : une histoire des femmes oubliées</h4>
-                                <p class="text-xs text-gray-500">Documentaire intégral</p>
-                                <p class="text-[11px] text-academic-muted line-clamp-2 mt-1">Dominique Deslandres présente la vie de Marie Pournin de La Faye, une figure essentielle de l'établissement de Montréal au XVIIe siècle.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 4. CONTAINER "NOUVELLES DU DERNIER MOIS" -->
-                <section class="space-y-4">
-                    <div class="flex items-center justify-between border-b border-academic-border pb-3">
-                        <h3 class="font-serif text-2xl font-bold text-burgundy-800 flex items-center gap-2">
-                            <i class="fa-solid fa-clock-rotate-left text-gold-500 text-lg"></i>
-                            Nouvelles du dernier mois
-                        </h3>
-                        <span class="text-xs font-medium text-gray-500">Filtre : Octobre - Novembre 2026</span>
-                    </div>
-
-                    <div class="bg-white rounded-2xl border border-academic-border p-6 academic-shadow divide-y divide-gray-100">
-                        <!-- Item Fil d'actualité 1 -->
-                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div class="space-y-1 max-w-3xl">
-                                <div class="flex items-center gap-3">
-                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">04 Nov 2026</span>
-                                    <span class="text-xs text-gray-400">• Séance privée</span>
-                                </div>
-                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
-                                    Tenue de la séance d'automne au Musée de la civilisation
-                                </h4>
-                                <p class="text-xs text-academic-muted">
-                                    Les membres de la Société des Dix se sont réunis à Québec pour entamer l'évaluation des manuscrits destinés au Cahier N° 80.
-                                </p>
-                            </div>
-                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
-                                Communiqué <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                            </button>
-                        </div>
-
-                        <!-- Item Fil d'actualité 2 -->
-                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div class="space-y-1 max-w-3xl">
-                                <div class="flex items-center gap-3">
-                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">22 Oct 2026</span>
-                                    <span class="text-xs text-gray-400">• Partenariat Érudit</span>
-                                </div>
-                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
-                                    Mise en ligne des numéros 70 à 75 sur la plateforme Érudit
-                                </h4>
-                                <p class="text-xs text-academic-muted">
-                                    L'accessibilité numérique des travaux de la Société s'enrichit avec la mise en libre accès de six nouveaux volumes historiques.
-                                </p>
-                            </div>
-                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
-                                Accéder <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                            </button>
-                        </div>
-
-                        <!-- Item Fil d'actualité 3 -->
-                        <div class="py-4 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div class="space-y-1 max-w-3xl">
-                                <div class="flex items-center gap-3">
-                                    <span class="text-xs font-semibold text-gold-600 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">12 Oct 2026</span>
-                                    <span class="text-xs text-gray-400">• Appel à candidatures</span>
-                                </div>
-                                <h4 class="font-serif text-lg font-bold text-gray-900 hover:text-burgundy-800 transition-colors cursor-pointer">
-                                    Ouverture des candidatures pour le Prix des Dix 2027
-                                </h4>
-                                <p class="text-xs text-academic-muted">
-                                    Le comité d'attribution invite les étudiants au doctorat et les chercheurs indépendants à soumettre leurs dossiers avant le 31 janvier.
-                                </p>
-                            </div>
-                            <button class="shrink-0 text-xs font-semibold text-burgundy-800 hover:underline flex items-center gap-1 self-start md:self-center">
-                                Directives <i class="fa-solid fa-chevron-right text-[9px]"></i>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
             </div>
 
-            <!-- VUE DYNAMIQUE GÉNÉRIQUE POUR LES AUTRES PAGES DU MENU -->
+            <!-- VUE DYNAMIQUE GÉNÉRIQUE -->
             <div id="view-generic" class="hidden fade-in space-y-6">
                 <div class="bg-white rounded-2xl border border-academic-border p-8 academic-shadow">
                     <h2 id="generic-title" class="font-serif text-3xl font-bold text-burgundy-800 mb-4">Titre de la Section</h2>
                     <div class="w-16 h-1 bg-gold-400 mb-6"></div>
-                    <div class="prose max-w-none text-gray-700 space-y-4 text-sm leading-relaxed" id="generic-content">
-                        <!-- Le contenu s'injectera ici dynamiquement -->
+                    <div class="prose max-w-none text-gray-700 space-y-4 text-sm leading-relaxed" id="generic-content"></div>
+                </div>
+            </div>
+
+            <!-- VUE SPÉCIFIQUE : LE PRIX DES DIX (Uniquement l'index chronologique supérieur avec recherche) -->
+            <div id="view-prix" class="hidden fade-in space-y-6">
+                <div class="bg-white rounded-2xl border border-academic-border p-6 md:p-10 academic-shadow space-y-8">
+                    
+                    <div class="max-w-3xl space-y-3">
+                        <span class="text-xs uppercase font-semibold tracking-widest text-gold-600 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Distinction annuelle</span>
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-burgundy-800">Le Prix des Dix</h2>
+                        <div class="w-16 h-1 bg-gold-400"></div>
+                        <p class="text-sm md:text-base text-gray-700 leading-relaxed text-justify">
+                            Datant des années soixante, le <strong>Prix des Dix</strong> a été relancé en 2001. Il est destiné à honorer une personne pour sa contribution remarquable dans le domaine de l'histoire du Québec ou de l'Amérique française (recherche ou diffusion). Cliquez sur un récipiendaire pour ouvrir sa biographie complète et sa photographie officielle en fenêtre modale.
+                        </p>
+                    </div>
+
+                    <!-- Index chronologique complet des lauréats (Grille interactive de boutons) -->
+                    <div class="bg-[#fcfbf9] border border-academic-border rounded-xl p-4 md:p-6 space-y-4">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                            <h3 class="font-serif text-xl font-bold text-burgundy-800 flex items-center gap-2">
+                                <i class="fa-solid fa-list-ol text-gold-500"></i> Index chronologique des lauréats
+                            </h3>
+                            <div class="relative">
+                                <input type="text" id="prix-search" oninput="filterPrixList()" placeholder="Filtrer par nom ou année..." class="pl-9 pr-4 py-1.5 text-xs bg-white border border-academic-border rounded-full w-full md:w-64 focus:outline-none focus:border-burgundy-800 transition-all">
+                                <i class="fa-solid fa-filter absolute left-3 top-2.5 text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Grille complète des récipiendaires -->
+                        <div id="prix-quick-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 max-h-[500px] overflow-y-auto p-2 text-xs">
+                            <button onclick="openPrixModal('2023', 'Roland Viau', 'https://lh3.googleusercontent.com/d/1wzpeSNewsZY9BMfDJa9pJqYhD1TTCHk3', `En 2023, la Société des Dix décerne son prix annuel à Roland Viau, gestionnaire des Services de référence à Bibliothèque et Archives Canada, institution où on n’a pas manqué de reconnaître ses bons coups et l’excellence de son travail. Roland Viau a étudié en histoire à l’Université Laval avant de poursuivre une maîtrise et un doctorat en anthropologie à l’Université de Montréal.
+
+Ce qui caractérise Roland Viau est la responsabilité mémorielle et sociale d’un historien préoccupé de restaurer la mémoire collective par l’histoire de tous, certes celle des Autochtones, avant et après l’arrivée des colons, mais également celle des ouvriers irlandais qui ont construit, au pic et à la pelle, le premier canal de Beauharnois (1842-1845), long de 18 kilomètres (Voir ce livre de 2013, Du pain et du sang. Les travailleurs irlandais et le canal Beauharnois, Presses de l’Université de Montréal). Il s’agit du passé oublié/occulté d’une révolte d’ouvriers survenue le 12 juin 1843 : plus de 2000 terrassiers en grève illégale ont été violemment réprimés par les troupes de la garnison. Viau mesure l’ampleur des décès, que sous-estiment les sources officielles, par le dénombrement des services funèbres, faute d’avoir recours à la tradition orale d’alors, évanouie.
+
+Dans son livre de 2003, Ceux de Nigger Rock. Enquête sur un cas d’esclavage des Noirs dans le Québec ancien (Libre Expression), Roland Viau s’intéresse aux esclaves amenés avec leurs maîtres loyalistes sur le piémont des Appalaches, dans les Cantons de l’Est, à des fins de production de la potasse nécessaire au blanchiment du coton et du papier. Sur les terres de ces petits propriétaires se trouvaient habituellement des cimetières d’esclaves. Roland Viau en a repéré et documenté un, où le propriétaire actuel s’oppose à toute recherche archéologique et à toute plaque commémorative. Un livre et une bataille citoyenne pour la mémoire de l’esclavage aboli au Canada en 1833.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2023</span><span class="truncate font-medium mt-1">Roland Viau</span></button>
+                          
+  <button onclick="openPrixModal('2022', 'Julie Roy', 'https://lh3.googleusercontent.com/d/1DI60qG8CIfIa6D3Kglpu_VrUvlC-Jssd?auto=format&fit=crop&q=80&w=500', 'Julie Roy personnifie la travailleuse de l ombre, la chercheuse exceptionnellement originale en histoire des femmes et des écrivaines...')" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2022</span><span class="truncate font-medium mt-1">Julie Roy</span></button>
+
+                            <button onclick="openPrixModal('2021', 'Martine Dumais', 'https://lh3.googleusercontent.com/d/19VLh3Zz8vdS-FNI14nYdSLe4W4_rakdq?auto=format&fit=crop&q=80&w=500', `En 2021, la Société des Dix décerne son prix annuel à Martine Dumais, enseignante émérite du niveau collégial québécois...`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2021</span><span class="truncate font-medium mt-1">Martine Dumais</span></button>
+
+                            <button onclick="openPrixModal('2020', 'Pierre Lahoud', 'https://lh3.googleusercontent.com/d/10mmRHBbBYOiwmAZoZKRW3Wh9c0OMGjly?auto=format&fit=crop&q=80&w=500', `Pierre Lahoud, historien et photographe, se consacre depuis plus de 40 ans à l inventaire aérien du paysage québécois...`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2020</span><span class="truncate font-medium mt-1">Pierre Lahoud</span></button>
+
+                            <button onclick="openPrixModal('2019', 'Louise Pothier', 'https://lh3.googleusercontent.com/d/1IYOCR7ksYmmwRf7JLxc15TqJbmOWZSI8?auto=format&fit=crop&q=80&w=500', `Conservatrice et archéologue en chef à Pointe-à-Callière, Louise Pothier œuvre en interprétation du patrimoine depuis plus de 25 ans...`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2019</span><span class="truncate font-medium mt-1">Louise Pothier</span></button>
+
+                            <button onclick="openPrixModal('2018', 'Jean-Marie Lebel', 'https://lh3.googleusercontent.com/d/1ilroyC-Jl4UrA-za0cRjLN4BBSmVFmwm?auto=format&fit=crop&q=80&w=500', `Jean-Marie Lebel est un historien de renom de la ville de Québec. Ses travaux portant sur l histoire architecturale ont grandement contribué à la mise en valeur du patrimoine urbain.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2018</span><span class="truncate font-medium mt-1">Jean-Marie Lebel</span></button>
+
+                            <button onclick="openPrixModal('2017', 'Jean-Charles Déziel', 'https://lh3.googleusercontent.com/d/1ApxwdNT9sQR0ckn2vR7HYf5_g6rZiv66?auto=format&fit=crop&q=80&w=500', `Jean-Charles Déziel a consacré de nombreuses années à l étude et à la préservation du patrimoine historique régional.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2017</span><span class="truncate font-medium mt-1">Jean-Charles Déziel</span></button>
+
+                            <button onclick="openPrixModal('2016', 'Richard Foisy', 'https://lh3.googleusercontent.com/d/1h-TLoUdkEGQk7oNjnNQfVbB-5ie3yXvu?auto=format&fit=crop&q=80&w=500', `Richard Foisy a contribué de manière significative à la recherche et à la diffusion de l histoire culturelle et littéraire du Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2016</span><span class="truncate font-medium mt-1">Richard Foisy</span></button>
+
+                            <button onclick="openPrixModal('2015', 'Denis Vaugeois', 'https://lh3.googleusercontent.com/d/1IZln7jljkgVKGJLNDQP6X1PVVSxi2PuC', `Denis Vaugeois est un éditeur, historien et homme politique québécois. Fondateur du Septentrion, il a joué un rôle déterminant dans l édition et la diffusion d ouvrages majeurs.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2015</span><span class="truncate font-medium mt-1">Denis Vaugeois</span></button>
+
+                            <button onclick="openPrixModal('2014', 'Paul Aubin', 'https://lh3.googleusercontent.com/d/1IfvGmKhZhTwVPabKHQa_KvKRAKTTLYRd?auto=format&fit=crop&q=80&w=500', `Paul Aubin est un bibliographe et historien dont les travaux de recensement bibliographique constituent des outils indispensables.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2014</span><span class="truncate font-medium mt-1">Paul Aubin</span></button>
+
+                            <button onclick="openPrixModal('2013', 'Jean Provencher', 'https://lh3.googleusercontent.com/d/1kvjCpm_w6VCQr01llBllfG01Wrg8wLmK?auto=format&fit=crop&q=80&w=500', `Jean Provencher est un historien et essayiste québécois très connu pour ses livres consacrés à la vie quotidienne et aux traditions du Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2013</span><span class="truncate font-medium mt-1">Jean Provencher</span></button>
+
+                            <button onclick="openPrixModal('2012', 'Marcel Fournier', 'https://lh3.googleusercontent.com/d/1IAvhq7x_SgPTlrrvtPUNhSif5IuHdWSI?auto=format&fit=crop&q=80&w=500', `Marcel Fournier est un spécialiste de la généalogie et de l histoire des mouvements migratoires sous le régime français.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2012</span><span class="truncate font-medium mt-1">Marcel Fournier</span></button>
+
+                            <button onclick="openPrixModal('2011', 'Yves Beauregard', 'https://lh3.googleusercontent.com/d/1_EvxrNlV-VPWm4jY7IdtnHYAEFZNINGE?auto=format&fit=crop&q=80&w=500', `Yves Beauregard a dirigé pendant de nombreuses années la revue d histoire Cap-aux-Diamants.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2011</span><span class="truncate font-medium mt-1">Yves Beauregard</span></button>
+
+                            <button onclick="openPrixModal('2010', 'Hélène Pelletier-Baillargeon', 'https://lh3.googleusercontent.com/d/1ieLEUXA3QXieXR90a8BgFfdyrq7Rqcfr?auto=format&fit=crop&q=80&w=500', `Hélène Pelletier-Baillargeon est une écrivaine et biographe de premier plan, autrice d une biographie magistrale sur Henri Bourassa.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2010</span><span class="truncate font-medium mt-1">Hélène Pelletier-B.</span></button>
+
+                            <button onclick="openPrixModal('2009', 'Sylvie Vincent', 'https://lh3.googleusercontent.com/d/1AMdOV-WB1PkqK0GY_EWPAKBH3qpJkX5n?auto=format&fit=crop&q=80&w=500', `Sylvie Vincent est une anthropologue et ethnologue reconnue pour ses travaux pionniers sur les relations entre Autochtones et non-Autochtones.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2009</span><span class="truncate font-medium mt-1">Sylvie Vincent</span></button>
+
+                            <button onclick="openPrixModal('2007-08', 'Jacques Lacoursière', 'https://lh3.googleusercontent.com/d/1n3QEbPq2AEIJwJC-gEfdPLfWFnhTfK5j', `Jacques Lacoursière est un historien et vulgarisateur émérite, auteur de l immense fresque Histoire populaire du Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2007-08</span><span class="truncate font-medium mt-1">Jacques Lacoursière</span></button>
+
+                            <button onclick="openPrixModal('2006', 'Georges Aubin', 'https://lh3.googleusercontent.com/d/1Zym3ACw1q1sh09Z1Udop9pQadcIoPufq?auto=format&fit=crop&q=80&w=500', `Georges Aubin est un archiviste et historien s étant distingué dans l édition critique des textes de Louis-Joseph Papineau et des Patriotes.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2006</span><span class="truncate font-medium mt-1">Georges Aubin</span></button>
+
+                            <button onclick="openPrixModal('2005', 'Gisèle Huot', 'https://lh3.googleusercontent.com/d/1Ldf_yx0kikAZQp2hwGY4gTJpK3oR3DuO?auto=format&fit=crop&q=80&w=500', `Gisèle Huot a œuvré activement à la recherche et à la mise en valeur du patrimoine littéraire et théâtral québécois.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2005</span><span class="truncate font-medium mt-1">Gisèle Huot</span></button>
+
+                            <button onclick="openPrixModal('2004', 'Jocelyn St-Pierre', 'https://lh3.googleusercontent.com/d/1W4UleXcgNG6l8Og5bmz9UxIv0aJkEi4X?auto=format&fit=crop&q=80&w=500', `Jocelyn St-Pierre est historien et bibliothécaire, spécialiste de l histoire de la presse et des périodiques au Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2004</span><span class="truncate font-medium mt-1">Jocelyn St-Pierre</span></button>
+
+                            <button onclick="openPrixModal('2003', 'Bernard Genest', 'https://lh3.googleusercontent.com/d/1x1Sznt5XY-2C7spz8j-DZCoyk1Yt4ASb?auto=format&fit=crop&q=80&w=500', `Bernard Genest est un pionnier de l ethnologie et de l inventaire du patrimoine mobilier et architectural au Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2003</span><span class="truncate font-medium mt-1">Bernard Genest</span></button>
+
+                            <button onclick="openPrixModal('2002', 'André Beaulieu', 'https://lh3.googleusercontent.com/d/11kU4tw2qFxfuzn9eVJT8svWkF927uNzO?auto=format&fit=crop&q=80&w=500', `André Beaulieu est un historien et statisticien, coauteur de la célèbre étude sur la presse québécoise.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2002</span><span class="truncate font-medium mt-1">André Beaulieu</span></button>
+
+                            <button onclick="openPrixModal('2001', 'Lucius Laliberté', 'https://lh3.googleusercontent.com/d/1sKWRB_ygNfLxBBVAoRc9Oz1nwoUPKIcT?auto=format&fit=crop&q=80&w=500', `Lucius Laliberté a marqué la conservation et la diffusion des sources historiques régionales.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">2001</span><span class="truncate font-medium mt-1">Lucius Laliberté</span></button>
+
+                            <button onclick="openPrixModal('1968', 'Lucien Brault', 'https://lh3.googleusercontent.com/d/1jNawcy-UTZC5bfmbBJOxPffTpnIW466I?auto=format&fit=crop&q=80&w=500', `Lucien Brault a été un historien pionnier de l histoire urbaine de la région d Ottawa et de la fonction publique fédérale.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">1968</span><span class="truncate font-medium mt-1">Lucien Brault</span></button>
+
+                            <button onclick="openPrixModal('1967', 'Léon Pouliot', 'https://lh3.googleusercontent.com/d/1Bbv2HLH2k_5vpi2_MJn76X_qRyv8oACY?auto=format&fit=crop&q=80&w=500', `Le père Léon Pouliot fut un historien jésuite marquant de l Église et de la Nouvelle-France.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">1967</span><span class="truncate font-medium mt-1">Léon Pouliot</span></button>
+
+                            <button onclick="openPrixModal('1966', 'Mgr Victor Tremblay', 'https://lh3.googleusercontent.com/d/1cLpHbNJkWBe6jA8OheMSal9f7Kt2gnLL?auto=format&fit=crop&q=80&w=500', `Mgr Victor Tremblay a fondé la Société historique du Saguenay et s est consacré toute sa vie à l histoire régionale.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">1966</span><span class="truncate font-medium mt-1">Mgr V. Tremblay</span></button>
+
+                            <button onclick="openPrixModal('1965', 'Gérard Morisset', 'https://lh3.googleusercontent.com/d/1fahfAA6fInhso_qd-K4BwDq7KNnCJ8Q-?auto=format&fit=crop&q=80&w=500', `Gérard Morisset est le pionnier incontesté de l inventaire et de la protection des arts et du patrimoine au Québec.`)" class="p-3 bg-white hover:bg-burgundy-800 hover:text-white rounded-lg border border-academic-border transition-colors text-left flex flex-col shadow-sm group"><span class="font-bold text-gold-600 group-hover:text-gold-400">1965</span><span class="truncate font-medium mt-1">Gérard Morisset</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- VUE SPÉCIFIQUE : LA SOCIÉTÉ DES DIX EN 2026 (10 cases sur deux lignes) -->
+            <!-- VUE SPÉCIFIQUE : LA SOCIÉTÉ DES DIX EN 2026 -->
             <div id="view-societe-2026" class="hidden fade-in space-y-6">
                 <div class="bg-white rounded-2xl border border-academic-border p-8 academic-shadow">
                     <div class="max-w-3xl mb-8">
@@ -626,10 +437,7 @@
                         </p>
                     </div>
 
-                    <!-- Grille de 10 cases : 2 lignes de 5 colonnes -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                        
-                        <!-- Fauteuil 1 -->
                         <div onclick="openMembreModal(1)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
@@ -641,8 +449,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 1</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 2 -->
                         <div onclick="openMembreModal(2)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/13tA8zohfl0zAwjM0o4iox5swL8GHoAXK?auto=format&fit=crop&q=80&w=500');"></div>
@@ -654,8 +460,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 2</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 3 -->
                         <div onclick="openMembreModal(3)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1MmA0CmIUWD4r3Ai5MKpuCO8AKEgWlE8T?auto=format&fit=crop&q=80&w=500');"></div>
@@ -667,8 +471,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 3</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 4 -->
                         <div onclick="openMembreModal(4)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Sxofsji6vaZ7881OIvHcwalhendxI76Z?auto=format&fit=crop&q=80&w=500');"></div>
@@ -680,8 +482,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 4</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 5 -->
                         <div onclick="openMembreModal(5)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1GqUX0fplaeQyNj8sCFzx7TA4_eoozGOO?auto=format&fit=crop&q=80&w=500');"></div>
@@ -693,8 +493,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 5</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 6 -->
                         <div onclick="openMembreModal(6)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/18bCDdim7E0mlJRjMezb6X4qB1Ny7RC5K?auto=format&fit=crop&q=80&w=500');"></div>
@@ -706,8 +504,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 6</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 7 -->
                         <div onclick="openMembreModal(7)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1_kWiRb8HH2k24RpRPjjKXeuMqdqo3PkU?auto=format&fit=crop&q=80&w=500');"></div>
@@ -719,8 +515,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 7</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 8 -->
                         <div onclick="openMembreModal(8)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1jfps6jVty-H078bpk-JuVID-z4qJIVqp?auto=format&fit=crop&q=80&w=500');"></div>
@@ -732,8 +526,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 8</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 9 -->
                         <div onclick="openMembreModal(9)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1Kr7mis6M0ZDgAm1csJ6Yqv1ROyW2deDC?auto=format&fit=crop&q=80&w=500');"></div>
@@ -745,8 +537,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 9</p>
                             </div>
                         </div>
-
-                        <!-- Fauteuil 10 -->
                         <div onclick="openMembreModal(10)" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1rpl3xNu6xh85o6h4B_WOVOBXSZG-uIQL?auto=format&fit=crop&q=80&w=500');"></div>
@@ -758,12 +548,11 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Fauteuil 10</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <!-- VUE SPÉCIFIQUE : MEMBRES ÉMÉRITES ET ASSOCIÉS (15 cases : 3 lignes de 5 colonnes) -->
+            <!-- VUE SPÉCIFIQUE : MEMBRES ÉMÉRITES ET ASSOCIÉS -->
             <div id="view-membres" class="hidden fade-in space-y-6">
                 <div class="bg-white rounded-2xl border border-academic-border p-8 academic-shadow">
                     <div class="max-w-3xl mb-8">
@@ -774,10 +563,7 @@
                         </p>
                     </div>
 
-                    <!-- Grille de 15 cases : 3 lignes de 5 colonnes -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                        
-                        <!-- 1. Simon Langlois -->
                         <div onclick="openEmeriteModal('Simon Langlois', 'https://lh3.googleusercontent.com/d/1F8a2yf-FDJfzq7b9gcpqnEhITWSD6Gzz', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1F8a2yf-FDJfzq7b9gcpqnEhITWSD6Gzz');"></div>
@@ -789,8 +575,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 2. Laurier Lacroix -->
                         <div onclick="openEmeriteModal('Laurier Lacroix', 'https://lh3.googleusercontent.com/d/1US1EBbKuoL8LrVgMl2X8jw5hfABNUml1?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1US1EBbKuoL8LrVgMl2X8jw5hfABNUml1?auto=format&fit=crop&q=80&w=500');"></div>
@@ -802,8 +586,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 3. Bernard Andrès -->
                         <div onclick="openEmeriteModal('Bernard Andrès', 'https://lh3.googleusercontent.com/d/1X4a74Nr5fA-sHPm_6RoH3x71oUPobLhN?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1X4a74Nr5fA-sHPm_6RoH3x71oUPobLhN?auto=format&fit=crop&q=80&w=500');"></div>
@@ -815,8 +597,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 4. Fernand Harvey -->
                         <div onclick="openEmeriteModal('Fernand Harvey', 'https://lh3.googleusercontent.com/d/1ZfRKiCGNIfczi8DwW0DW1ksgxRgRNkPL', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1ZfRKiCGNIfczi8DwW0DW1ksgxRgRNkPL');"></div>
@@ -828,8 +608,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 5. Gilles Gallichan -->
                         <div onclick="openEmeriteModal('Gilles Gallichan', 'https://lh3.googleusercontent.com/d/1HoK_OiAxDWTdedqLcbm7WbwIdjkFq8J0?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1HoK_OiAxDWTdedqLcbm7WbwIdjkFq8J0?auto=format&fit=crop&q=80&w=500');"></div>
@@ -841,8 +619,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 6. Jean Simard -->
                         <div onclick="openEmeriteModal('Jean Simard', 'https://lh3.googleusercontent.com/d/1WIW3R1gYO2ApUmyU8F6qEEizJ6CoLwyt?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1WIW3R1gYO2ApUmyU8F6qEEizJ6CoLwyt?auto=format&fit=crop&q=80&w=500');"></div>
@@ -854,8 +630,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 7. Marcel Moussette -->
                         <div onclick="openEmeriteModal('Marcel Moussette', 'https://lh3.googleusercontent.com/d/1M5ZmpYLp_JVRbXLSrIpfTkWV_4zWpID1?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1M5ZmpYLp_JVRbXLSrIpfTkWV_4zWpID1?auto=format&fit=crop&q=80&w=500');"></div>
@@ -867,8 +641,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 8. Marie-Thérèse Lefebvre -->
                         <div onclick="openEmeriteModal('Marie-Thérèse Lefebvre', 'https://lh3.googleusercontent.com/d/1jCR6b3VopNXczmKTXPnltzkKVtH0suc-?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1jCR6b3VopNXczmKTXPnltzkKVtH0suc-?auto=format&fit=crop&q=80&w=500');"></div>
@@ -880,8 +652,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 9. Mireille Barrière -->
                         <div onclick="openEmeriteModal('Mireille Barrière', 'https://lh3.googleusercontent.com/d/1X0WSuvRbEZ2qaXTfzVb-OKmf78O-fzU9?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1X0WSuvRbEZ2qaXTfzVb-OKmf78O-fzU9?auto=format&fit=crop&q=80&w=500');"></div>
@@ -893,8 +663,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 10. Pierre Trépanier -->
                         <div onclick="openEmeriteModal('Pierre Trépanier', 'https://lh3.googleusercontent.com/d/1hxj2uyRvd2sjpVtYDkN3GWT-N9M2ZmJ2?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1hxj2uyRvd2sjpVtYDkN3GWT-N9M2ZmJ2?auto=format&fit=crop&q=80&w=500');"></div>
@@ -906,8 +674,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 11. Roger LeMoine -->
                         <div onclick="openEmeriteModal('Roger LeMoine', 'https://lh3.googleusercontent.com/d/1cIjpkFkdvxdyGUVMwsVsd3akgHkgWKGE?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1cIjpkFkdvxdyGUVMwsVsd3akgHkgWKGE?auto=format&fit=crop&q=80&w=500');"></div>
@@ -919,8 +685,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
-                        <!-- 12. Yvan Lamonde -->
                         <div onclick="openEmeriteModal('Yvan Lamonde', 'https://lh3.googleusercontent.com/d/1oEi6Ym0784a8iWt8QNFBobrr0GcMx4_P?auto=format&fit=crop&q=80&w=500', 'Membre émérite')" class="bg-white rounded-xl border border-academic-border overflow-hidden academic-shadow hover:border-gold-400/70 hover:shadow-lg transition-all flex flex-col group cursor-pointer text-center">
                             <div class="relative h-48 bg-gray-900 overflow-hidden">
                                 <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-all duration-500" style="background-image: url('https://lh3.googleusercontent.com/d/1oEi6Ym0784a8iWt8QNFBobrr0GcMx4_P?auto=format&fit=crop&q=80&w=500');"></div>
@@ -932,7 +696,6 @@
                                 <p class="text-xs text-gold-600 font-semibold mt-1">Membre émérite</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -942,11 +705,10 @@
 
     <!-- MODAL "NOUS REJOINDRE" -->
     <div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl border border-academic-border max-w-lg w-full p-6 md:p-8 space-y-6 shadow-2xl relative animate-in fade-in zoom-in-95">
+        <div class="bg-white rounded-2xl border border-academic-border max-w-lg w-full p-6 md:p-8 space-y-6 shadow-2xl relative">
             <button onclick="closeJoinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-
             <div class="text-center space-y-2">
                 <div class="w-12 h-12 bg-burgundy-50 text-burgundy-800 rounded-full flex items-center justify-center mx-auto text-xl">
                     <i class="fa-solid fa-hands-holding-circle"></i>
@@ -954,7 +716,6 @@
                 <h3 class="font-serif text-2xl font-bold text-burgundy-800">Rejoindre la Société des Dix</h3>
                 <p class="text-xs text-academic-muted">Soutenez la recherche historique et la publication des Cahiers</p>
             </div>
-
             <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
                 <div>
                     <label class="block font-semibold text-gray-700 mb-1">Nom complet</label>
@@ -983,63 +744,33 @@
         </div>
     </div>
 
-    <!-- MODAL LECTEUR VIDÉO -->
-    <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
-        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-5xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
-            <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl z-20 bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            
-            <div class="w-full md:w-3/5 bg-black flex items-center justify-center relative aspect-video md:aspect-auto">
-                <iframe id="modal-video-iframe" class="w-full h-full min-h-[350px] md:min-h-[450px]" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-
-            <div class="w-full md:w-2/5 p-6 md:p-8 flex flex-col justify-between bg-gray-900 text-gray-100 space-y-4">
-                <div class="space-y-4">
-                    <span class="inline-block px-3 py-1 bg-burgundy-800/80 text-gold-400 text-[11px] font-bold rounded uppercase tracking-wider">Synopsis officiel</span>
-                    <h3 id="modal-video-title" class="font-serif text-2xl font-bold text-white leading-snug">Titre de la vidéo</h3>
-                    <div class="w-12 h-0.5 bg-gold-400 opacity-80"></div>
-                    <p id="modal-video-synopsis" class="text-sm text-gray-300 leading-relaxed text-justify">
-                        Description et résumé détaillé de la vidéo et de ses enjeux historiques et sociologiques.
-                    </p>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400">
-                    <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeVideoModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors font-medium">
-                        Fermer le lecteur
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL MEMBRES (Dynamique pour la Société en 2026) -->
-    <div id="membre-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+    <!-- MODAL PRIX DES DIX (Affiche photo et biographie complète du récipiendaire) -->
+    <div id="prix-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
-            <button onclick="closeMembreModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+            <button onclick="closePrixModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
-                <div id="membre-modal-img" class="absolute inset-0 bg-cover bg-center"></div>
+                <div id="prix-modal-img" class="absolute inset-0 bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span id="membre-modal-badge" class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil</span>
+                <span id="prix-modal-year" class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Année</span>
             </div>
 
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
-                        <i class="fa-solid fa-landmark"></i> Membre titulaire
+                        <i class="fa-solid fa-award"></i> Lauréat du Prix des Dix
                     </div>
-                    <h3 id="membre-modal-name" class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nom du Membre</h3>
+                    <h3 id="prix-modal-name" class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nom du Lauréat</h3>
                     <div class="w-12 h-0.5 bg-gold-400"></div>
-                    <p id="membre-modal-bio" class="text-sm text-gray-700 leading-relaxed text-justify">
-                        Biographie du membre...
+                    <p id="prix-modal-text" class="text-sm text-gray-700 leading-relaxed text-justify whitespace-pre-line">
+                        Biographie du lauréat...
                     </p>
                 </div>
                 <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
-                    <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeMembreModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
+                    <span>Le Prix des Dix &copy; Société des Dix</span>
+                    <button onclick="closePrixModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
                         Fermer
                     </button>
                 </div>
@@ -1047,19 +778,69 @@
         </div>
     </div>
 
-    <!-- MODAL MEMBRES ÉMÉRITES ET ASSOCIÉS -->
+    <!-- MODAL LECTEUR VIDÉO -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-5xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+            <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl z-20 bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full md:w-3/5 bg-black flex items-center justify-center relative aspect-video md:aspect-auto">
+                <iframe id="modal-video-iframe" class="w-full h-full min-h-[350px] md:min-h-[450px]" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="w-full md:w-2/5 p-6 md:p-8 flex flex-col justify-between bg-gray-900 text-gray-100 space-y-4">
+                <div class="space-y-4">
+                    <span class="inline-block px-3 py-1 bg-burgundy-800/80 text-gold-400 text-[11px] font-bold rounded uppercase tracking-wider">Synopsis officiel</span>
+                    <h3 id="modal-video-title" class="font-serif text-2xl font-bold text-white leading-snug">Titre</h3>
+                    <div class="w-12 h-0.5 bg-gold-400 opacity-80"></div>
+                    <p id="modal-video-synopsis" class="text-sm text-gray-300 leading-relaxed text-justify">Description</p>
+                </div>
+                <div class="pt-4 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeVideoModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors font-medium">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL MEMBRES -->
+    <div id="membre-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
+            <button onclick="closeMembreModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
+                <div id="membre-modal-img" class="absolute inset-0 bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span id="membre-modal-badge" class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil</span>
+            </div>
+            <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+                        <i class="fa-solid fa-landmark"></i> Membre titulaire
+                    </div>
+                    <h3 id="membre-modal-name" class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nom</h3>
+                    <div class="w-12 h-0.5 bg-gold-400"></div>
+                    <p id="membre-modal-bio" class="text-sm text-gray-700 leading-relaxed text-justify">Bio</p>
+                </div>
+                <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
+                    <span>Société des Dix &copy; 2026</span>
+                    <button onclick="closeMembreModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ÉMÉRITES -->
     <div id="emerite-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 md:p-8">
         <div class="bg-white border border-academic-border rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh]">
             <button onclick="closeEmeriteModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
                 <div id="emerite-modal-img" class="absolute inset-0 bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 <span id="emerite-modal-badge" class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Membre</span>
             </div>
-
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
@@ -1067,15 +848,11 @@
                     </div>
                     <h3 id="emerite-modal-name" class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nom</h3>
                     <div class="w-12 h-0.5 bg-gold-400"></div>
-                    <p id="emerite-modal-bio" class="text-sm text-gray-700 leading-relaxed text-justify">
-                        Biographie du membre émérite...
-                    </p>
+                    <p id="emerite-modal-bio" class="text-sm text-gray-700 leading-relaxed text-justify">Bio</p>
                 </div>
                 <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
                     <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeEmeriteModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
-                        Fermer
-                    </button>
+                    <button onclick="closeEmeriteModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">Fermer</button>
                 </div>
             </div>
         </div>
@@ -1087,34 +864,23 @@
             <button onclick="closeChantalModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[280px] md:min-h-full">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 <span class="absolute bottom-4 left-4 bg-burgundy-800 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fauteuil #1 - Chantal Savoie</span>
             </div>
-
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
                         <i class="fa-solid fa-award"></i> Nomination Officielle
                     </div>
-                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">
-                        Nomination de Chantal Savoie au Fauteuil #1
-                    </h3>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Nomination de Chantal Savoie au Fauteuil #1</h3>
                     <div class="w-12 h-0.5 bg-gold-400"></div>
-                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
-                        Les Dix sont heureux d’annoncer la nomination de Chantal Savoie au Fauteuil #1 en remplacement de Simon Langlois. Chantal Savoie est professeure au Département d’études littéraires de l’UQAM, membre du Centre de recherche interuniversitaire sur la littérature et la culture au Québec (CRILCQ) et titulaire de la Chaire de recherche en histoire culturelle de pratiques non dominantes (CRC). Spécialiste de l’histoire littéraire et culturelle des femmes et de la culture de grande consommation, elle fait partie depuis vingt-cinq ans du collectif La vie littéraire au Québec.
-                    </p>
-                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
-                        Elle cosigne les tomes V, VI, VII (sous presse) et VIII (en préparation) de La vie littéraire au Québec parus aux Presses de l’Université Laval. Elle signe en outre la monographie Les femmes de lettres canadiennes-françaises au tournant du XXe siècle (2014), en plus d’avoir coordonné la publication de nombreux numéros de revues savantes et ouvrages collectifs. Elle dirige depuis 2023 la collection « La petite culture » aux Presses de l’Université de Montréal. Tout au long de son parcours, Chantal Savoie s’est impliquée dans la recherche collective et dans la création et la gestion d’infrastructures de recherche majeures.
-                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">Les Dix sont heureux d’annoncer la nomination de Chantal Savoie au Fauteuil #1 en remplacement de Simon Langlois...</p>
                 </div>
                 <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
                     <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeChantalModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
-                        Fermer
-                    </button>
+                    <button onclick="closeChantalModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">Fermer</button>
                 </div>
             </div>
         </div>
@@ -1126,7 +892,6 @@
             <button onclick="closeLangloisModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            
             <div class="w-full h-64 md:h-80 bg-gray-900 relative shrink-0">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1pk9CzLPVGu28cs3fgY0B8b8HSf1EiC3l');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -1135,28 +900,11 @@
                     <h3 class="font-serif text-2xl md:text-3xl font-bold leading-snug">Don exceptionnel des archives Wendat par Simon Langlois</h3>
                 </div>
             </div>
-
             <div class="p-6 md:p-8 flex-1 overflow-y-auto space-y-6 text-academic-text">
-                <div class="space-y-4 text-sm text-gray-700 leading-relaxed text-justify">
-                    <p>
-                        Simon Langlois a été honoré par le Grand chef de la nation Wendat Pierre Picard lors d’une cérémonie de remise d’une rame traditionnelle Onquata – produite par le savoir-faire des artisans de Wendake – tenue le 28 septembre 2026, à la veille de la Journée nationale de réconciliation. « La rame sert à remonter et à descendre avec force les rapides de la vie » a déclaré le Grand chef de la nation Wendat en remerciant le professeur Langlois pour son généreux don d’une collection de cartes anciennes et de livres rares du XVIIIe siècle se rapportant aux réalités autochtones et à la nation des Hurons, pour reprendre le vocable de l’époque. « Cette donation va enrichir les archives de la nation Wendat » a déclaré Raphaël Boney, archiviste, diplômé du département de sociologie de l’Université Laval.
-                    </p>
-                    <p>
-                        Simon Langlois a effectué un important don de cartes anciennes du 18e siècle illustrant la toponomie autochtone du territoire de l’Amérique septentrionale à l’époque de la Nouvelle-France. Les cartes ont été établies à l’époque par les géographes-hydrographes Rigobert Bonne, Jacques-Nicolas Bellin, Guillaume Delisle et Robert Vaugondy, entre autres. Plusieurs de ces cartes avaient servi à illustrer de nombreux ouvrages dont : <i>L’Histoire de la Nouvelle-France</i> de François-Xavier Charlevoix (1744), <i>L’Histoire philosophique et politique des établissements et du commerce dans les deux Indes</i> (1781) de l’abbé Guillaume-T.- F. Prévost ou encore le <i>Dictionnaire universel, historique et critique des mœurs, lois & usages des coutumes, pratiques religieuses (…) des peuples des quatre parties du monde</i> (1702).
-                    </p>
-                    <p>
-                        Bon nombre des ouvrages anciens et livres rares faisant partie de la donation comportent des mentions et des références aux Hurons, à leur langue, leurs mœurs et coutumes. On y retrouve notamment de nombreuses références à la langue parlée par les Hurons. La liste comprend notamment une édition originale du célèbre livre <i>Mémoire de l’Amérique septentrionale</i> du baron De Lahontan, les tomes de <i>L’Abrégé de l’histoire générale</i> de De la Harpe (1780) portant sur la Nouvelle-France, <i>L’histoire générale, civile, naturelle, politique et religieuse de tous les peuples du monde</i> (1750) de Claude-François Lambert, un livre de Voltaire (1770) qui contient l’article « Huron », etc.
-                    </p>
-                    <p>
-                        Ces documents seront conservés aux Archives de la nation Wendat à Wendake et ils seront disponibles pour consultation sur place. Ils constituent des sources précieuses pour l’histoire de cette nation et témoignent de leur présence et de leurs activités dans les années qui ont précédé l’arrivée des Européens et à l’époque de la Nouvelle-France.
-                    </p>
-                </div>
-                
+                <p class="text-sm text-gray-700 leading-relaxed text-justify">Simon Langlois a été honoré par le Grand chef de la nation Wendat Pierre Picard lors d’une cérémonie...</p>
                 <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
                     <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeLangloisModal()" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium shadow-sm">
-                        Fermer la fenêtre
-                    </button>
+                    <button onclick="closeLangloisModal()" class="px-5 py-2.5 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium shadow-sm">Fermer</button>
                 </div>
             </div>
         </div>
@@ -1168,45 +916,23 @@
             <button onclick="closeHarveyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl z-20 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            
             <div class="w-full md:w-2/5 bg-gray-900 flex items-center justify-center relative min-h-[300px] md:min-h-full">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1e_wbEEB3vxqVniMLEseoNaTUt7cRrV54');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                 <span class="absolute bottom-4 left-4 bg-blue-700 text-white text-[11px] font-semibold px-3 py-1 rounded shadow-md">Fernand Harvey</span>
             </div>
-
             <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-between bg-white text-academic-text space-y-4 overflow-y-auto">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 text-gold-600 text-xs uppercase font-semibold tracking-wider bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
                         <i class="fa-solid fa-award"></i> Distinction académique
                     </div>
-                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">
-                        Hommage à la contribution scientifique de Fernand Harvey
-                    </h3>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy-800 leading-snug">Hommage à la contribution scientifique de Fernand Harvey</h3>
                     <div class="w-12 h-0.5 bg-gold-400"></div>
-                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
-                        Notre collègue Fernand Harvey a récemment contribué à la biographie d’Athanase David dans le cadre du Dictionnaire biographique du Canada. 
-                        <a href="https://www.biographi.ca/fr/bio/david_athanase_18F.html" target="_blank" rel="noopener noreferrer" class="text-burgundy-800 hover:text-gold-600 inline-flex items-center gap-1 font-semibold ml-1 underline transition-colors">
-                            <span>Accéder au texte</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </p>
-                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
-                        La journaliste Karine Gagnon retrace également le parcours académique et professionnel de Fernand dans cet article éloquent, tout en soulignant l’apport de Fernand Dumont à sa propre pratique sociologique. 
-                        <a href="https://www.journaldequebec.com/2026/09/29/une-rencontre-determinante-avec-lun-des-peres-de-la-loi-101" target="_blank" rel="noopener noreferrer" class="text-burgundy-800 hover:text-gold-600 inline-flex items-center gap-1 font-semibold ml-1 underline transition-colors">
-                            <span>Accéder au texte</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </p>
-                    <p class="text-xs text-gray-500 italic pt-2">
-                        &copy; Photo : Stevens LeBlanc
-                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">Notre collègue Fernand Harvey a récemment contribué à la biographie d’Athanase David...</p>
                 </div>
                 <div class="pt-4 border-t border-academic-border flex items-center justify-between text-xs text-academic-muted">
                     <span>Société des Dix &copy; 2026</span>
-                    <button onclick="closeHarveyModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">
-                        Fermer
-                    </button>
+                    <button onclick="closeHarveyModal()" class="px-4 py-2 bg-burgundy-800 hover:bg-burgundy-900 text-white rounded-lg transition-colors font-medium">Fermer</button>
                 </div>
             </div>
         </div>
@@ -1214,90 +940,87 @@
 
     <!-- SCRIPTS JAVASCRIPT -->
     <script>
-        // Données des 10 membres titulaires
         const membresData = {
             1: {
                 nom: "Chantal Savoie",
                 fauteuil: "Fauteuil #1",
                 img: "https://lh3.googleusercontent.com/d/1mpkg6xleQyDmuXWK91c7kO10o3dNQSRz",
-                bio: `* Fauteuil précédemment occupé par Simon Langlois (2007), Pierre Trépanier (1988), Philippe Sylvain (1969), Gérard Malchelosse (1935).\n\nChantal Savoie est professeure au Département d’études littéraires de l’UQAM, membre du Centre de recherche interuniversitaire sur la littérature et la culture au Québec (CRILCQ) et titulaire de la Chaire de recherche en histoire culturelle de pratiques non dominantes (CRC). Spécialiste de l’histoire littéraire et culturelle des femmes et de la culture de grande consommation, elle fait partie depuis vingt-cinq ans du collectif La vie littéraire au Québec, dont elle cosigne les tomes V, VI, VII (sous presse) et VIII (en préparation) parus aux Presses de l’Université Laval.\n\nChantal Savoie signe en outre la monographie Les femmes de lettres canadiennes-françaises au tournant du XXe siècle (2014), en plus d’avoir coordonné la publication de nombreux numéros de revues savantes et ouvrages collectifs. Elle dirige depuis 2023 la collection « La petite culture » aux Presses de l’Université de Montréal. Tout au long de son parcours, Chantal Savoie s’est impliquée dans la recherche collective et dans la création et la gestion d’infrastructures de recherche majeures.`
+                bio: "Chantal Savoie est professeure au Département d’études littéraires de l’UQAM, membre du Centre de recherche interuniversitaire sur la littérature et la culture au Québec (CRILCQ)..."
             },
             2: {
                 nom: "Jean-François Palomino",
                 fauteuil: "Fauteuil #2",
                 img: "https://lh3.googleusercontent.com/d/13tA8zohfl0zAwjM0o4iox5swL8GHoAXK?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Victor Morin (1935), Louis-Philippe Audet (1959), Lucien Campeau (1973), Mireille Barrière (1998), Yvan Lamonde (2000), Andrée Fortin (2015).\n\nProfesseur au Département d’histoire de l’Université du Québec à Montréal, Jean-François Palomino est spécialiste de la cartographie de la Nouvelle-France. Détenteur d’un doctorat en histoire à l’Université de Montréal, il se mérite en 2019 le prix Louise-Dechêne de l’Institut d’histoire de l’Amérique française. Membre de la Commission de toponymie du Québec et du Centre de recherche interuniversitaire sur les humanités numériques, il a occupé les postes de cartothécaire et de coordonnateur à Bibliothèque et Archives nationales du Québec entre 2000 et 2023. Dans ces fonctions, il a contribué à l’enrichissement et à la valorisation des collections patrimoniales, tout en développant des projets de recherche et de diffusion numérique. Avec Raymonde Litalien et Denis Vaugeois, il est co-auteur du livre La mesure d’un continent : atlas historique de l’Amérique du Nord, 1492-1814, récipiendaire du prix Marcel-Couture et du prix Hercule-Catenacci. Il publie en 2026 aux éditions Boréal le livre Cartographier la Nouvelle-France : le savoir géographique au service de l’État (1534-1744).`
+                bio: "Professeur au Département d’histoire de l’Université du Québec à Montréal, Jean-François Palomino est spécialiste de la cartographie de la Nouvelle-France..."
             },
             3: {
                 nom: "Christian Blais",
                 fauteuil: "Fauteuil #3",
                 img: "https://lh3.googleusercontent.com/d/1MmA0CmIUWD4r3Ai5MKpuCO8AKEgWlE8T?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Gilles Gallichan (1993), Luc Lacourcière (1967), Léo-Paul Desrosiers (1941), Ægidius Fauteux (1935).\n\nChristian Blais est originaire de Carleton-sur-Mer, en Gaspésie. Diplômé en histoire à l’Université de Montréal et à l’Université Laval. Depuis 2002, il est historien à la Bibliothèque de l’Assemblée nationale, où il a notamment travaillé au programme de reconstitution des débats parlementaires antérieurs à 1963. Il est membre de la Société des Dix depuis 2019.\n\nSpécialiste de l’histoire politique et parlementaire du XVIIIe siècle, ses recherches sur le Québec couvrent également l’époque de la Nouvelle-France ainsi que l’État libéral moderne depuis le XIXe siècle jusqu’à nos jours.`
+                bio: "Christian Blais est originaire de Carleton-sur-Mer, en Gaspésie. Historien à la Bibliothèque de l’Assemblée nationale..."
             },
             4: {
                 nom: "Denys Delâge",
                 fauteuil: "Fauteuil #4",
                 img: "https://lh3.googleusercontent.com/d/1Sxofsji6vaZ7881OIvHcwalhendxI76Z?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Roger Le Moine (1988), Raymond Douville (1948), É.-Z. Massicotte (1935).\n\nDenys Delâge est membre de la Société des Dix depuis décembre 2004. Historien et sociologue rattaché au département de sociologie de l’Université Laval, il est reconnu pour la qualité de ses travaux sur l’histoire des Amérindiens et sur les réseaux d’alliance franco et anglo amérindiens dans l’est de l’Amérique du Nord aux XVIIe et XVIIIIe siècles.\n\nIl détient une licence en histoire de l’Université de Montréal (1965), une maîtrise en sociologie de la même université (1968) et un doctorat en histoire de l’École des Hautes Études en Sciences Sociales de l’Université de Paris I (1981), réalisé sous la direction d’Emmanuel Le Roy Ladurie.\n\nSon ouvrage, Le Pays renversé, Amérindiens et Européens en Amérique du Nord-Est 1600-1664 (Éditions du Boréal, 1985 et 1991), également paru en anglais chez UBC Press, lui a mérité de prix Lionel-Groulx du meilleur livre d’histoire (1986) et le prix John-Porter du meilleur livre canadien en sciences sociales. Mentionnons également un ouvrage dont il est coauteur avec Jean-Pierre Sawaya : Les traités des Sept-Feux avec les Britanniques : droits et pièges d’un héritage colonial au Québec (Septentrion, 2001). Il a publié de nombreux articles dans diverses revues dont Recherches Amérindiennes au Québec. On y trouve notamment une histoire du commerce dans le village huron de Wendake (Lorette) et deux articles sur la Grande Paix de 1701. Ses recherches en cours portent sur les dynamiques foncière, scolaire et judiciaire dans les rapports entre Européens et Amérindiens.`
+                bio: "Denys Delâge est membre de la Société des Dix depuis décembre 2004. Historien et sociologue rattaché au département de sociologie de l’Université Laval..."
             },
             5: {
                 nom: "Jacques Des Rochers",
                 fauteuil: "Fauteuil #5",
                 img: "https://lh3.googleusercontent.com/d/1GqUX0fplaeQyNj8sCFzx7TA4_eoozGOO?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Laurier Lacroix (2005), Claude Galarneau (1978), Jean-Charles Bonenfant (1963), Jean Bruchési (1943), Francis-J. Audet (1935).\n\nJacques Des Rochers est conservateur principal de l’art québécois et canadien au Musée des beaux-arts de Montréal depuis 2023, après avoir été conservateur de l’art québécois et canadien avant 1945, depuis 2002. Il a développé le concept d’exposition des collections dont il est responsable au nouveau pavillon Claire et Marc Bourgie, inauguré en 2011, et dirigé à cette occasion la première publication d’envergure dédiée à ce corpus.  Il a été commissaire de plusieurs expositions, notamment L’Héritage artistique des Sulpiciens de Montréal (2007). Plus récemment, il a été co-commissaire de l’exposition et co-directeur de la publication Une modernité des années vingt. Montréal. Le Groupe de Beaver Hall (2015), de même que Riopelle. À la rencontre des territoires nordiques et des cultures autochtones (2020).Ses projets ont été plusieurs fois primés.`
+                bio: "Jacques Des Rochers est conservateur principal de l’art québécois et canadien au Musée des beaux-arts de Montréal depuis 2023..."
             },
             6: {
                 nom: "Lucie Robert",
                 fauteuil: "Fauteuil #6",
                 img: "https://lh3.googleusercontent.com/d/18bCDdim7E0mlJRjMezb6X4qB1Ny7RC5K?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Olivier Maurault  (1935), Armand Yon (1966), Pierre Savard (1979), Bernard Andrès (1999).\n\n« La langue est la métaphore de l’histoire ». Lucie Robert, vous le savez, est ma collègue au Département d’Études littéraires de l’UQAM. Elle y fut même ma directrice durant quelques années. Un département où nous avons elle et moi enseigné les Lettres et la dramaturgie québécoises, mais aussi la sociocritique. C’est dire que nos intérêts académiques ont toujours convergé et qu’ils se recoupent encore. C’est pourquoi je me réjouis aujourd’hui de lui passer le relais à la Société des Dix, en vous adressant ces quelques mots de présentation.\n\nLucie a été formée à l’Université Laval où ses études doctorales ont porté sur le Manuel d’histoire littéraire de Camille Roy et sur l’institution littéraire au Québec. Elle a reçu deux fois le Prix Raymond-Klibansky, d’abord pour la publication de sa thèse, puis, en collaboration, pour sa participation au premier tome de La Vie littéraire au Québec. Ce tome, placé sous la direction de Maurice Lemire, portait sur ma période de prédilection : 1764-1805. Il est paru en 1991, à l’époque où je lançais moi-même le chantier de l’Archéologie du littéraire au Québec.\n\nFidèle artisane du vaste projet La Vie littéraire au Québec, initié par l’Université Laval, Lucie a co-dirigé avec Denis Saint-Jacques le tome V (sur le tournant du XXe s). Avant même La Vie littéraire au Québec, Lucie collaborait déjà au projet antérieur du Dictionnaire des œuvres littéraires du Québec (tomes 2 à 5, 8, 9).\n\nDans La Vie littéraire Lucie est responsable des sections sur les Biographies, l’histoire (comme genre littéraire), la vie théâtrale et les textes dramatiques. J’ajoute que, spécialiste de la dramaturgie québécoise, Lucie tient avec application, depuis plus de 30 ans, la chronique « Dramaturgie », dans Voix et images. Vous l’avez peut-être aussi entendu ses chroniques de dramaturgie à Radio-Canada.\n\nCe qu’on sait moins, car c’est secret (j’ai mes renseignements!), c’est que Lucie a fourni dans l’ombre (sans signature) la majeure partie des chapitres sur l’Éloquence religieuse, les Satires, les Pamphlets et la Polémique au XIXe siècle. Actuellement, elle s’occupe des radioromans, des causeries radiophoniques et de la Littérature jeunesse. Bientôt viendra, en plus de ces sujets, la littérature télévisuelle avec le prochain tome de La vie littéraire: 1948-1962.\n\nSpécialiste du XIXe siècle québécois, mais aussi de la première moitié du XXe, Lucie s’intéresse à l’histoire littéraire des femmes, mais, plus largement, aux Lettres et à la scène québécoises (en théâtre, elle « couvre » aussi toute la production contemporaine). Elle a dirigé d’importants projets subventionnés, dont le fameux CRILCQ (Centre interuniversitaire de recherche sur la littérature et la culture québécoises). Durant ces 10 dernières années, elle a aussi animé deux projets CRSH, l’un sur l’Histoire de la vie artistique au Québec de la fin du XIXe siècle à la Deuxième guerre mondiale, et l’autre sur la vie artistique au Québec (1895-1948).`
+                bio: "Lucie Robert est professeure au Département d’Études littéraires de l’UQAM, spécialiste de la dramaturgie québécoise et de l'histoire littéraire."
             },
             7: {
                 nom: "Jocelyne Mathieu",
                 fauteuil: "Fauteuil #7",
                 img: "https://lh3.googleusercontent.com/d/1_kWiRb8HH2k24RpRPjjKXeuMqdqo3PkU?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé  par Jean Simard (1991), Benoît Lacroix (1982), Robert-Lionel Séguin (1963), Antoine Roy (1953), Pierre Georges Roy (1935).\n\nJocelyne Mathieu est détentrice d’un doctorat en ethnologie de l’École des hautes études en sciences sociales de Paris et professeure titulaire en ethnologie du Québec et des francophones en Amérique du Nord au Département des sciences historiques à la Faculté des lettres et des sciences humaines de l’Université Laval à Québec. Comme professeure-chercheure, elle s’intéresse à la culture matérielle et aux coutumes, notamment en ce qui touche le costume et le textile, la vie domestique et quotidienne, les manières d’habiter, les arts populaires. Elle porte une attention toute spéciale à la vie des femmes, dans leurs témoignages oraux et écrits, entre autres dans la littérature personnelle. Directrice de plusieurs recherches de maitrise et de doctorat, l’Université Laval lui a décerné en 2014 un prix d’excellence en enseignement, volet «Encadrement aux cycles supérieurs», pour la qualité de sa supervision et la reconnaissance des étudiants diplômés. Elle a aussi été appelée à occuper plusieurs fonctions universitaires, notamment comme vice-doyenne aux études à la Faculté des lettres (1995-1997), adjointe au vice-rectorat aux études (1997-1999) et présidente de la Commission des études de l’Université Laval (1999-2007). Elle est membre de la Société des Dix depuis 2000.`
+                bio: "Jocelyne Mathieu est détentrice d’un doctorat en ethnologie de l’École des hautes études en sciences sociales de Paris..."
             },
             8: {
                 nom: "Louise Pothier",
                 fauteuil: "Fauteuil #8",
                 img: "https://lh3.googleusercontent.com/d/1jfps6jVty-H078bpk-JuVID-z4qJIVqp?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Fernand Harvey (1997), Guy-Marie Oury (1983), Séraphin Marion (1962), Albert Tessier (1935).\n\nConservatrice et archéologue en chef à Pointe-à-Callière, cité d’archéologie et d’histoire de Montréal, Louise Pothier oeuvre en interprétation du patrimoine depuis plus de 25 ans. Cofondatrice et directrice de la revue québécoise d’archéologie Mémoires vives (1992-1996), elle a également publié plusieurs textes dans des revues d’archéologie et d’histoire et des ouvrages collectifs.\n\nAprès une dizaine d’années comme chargée de projets en exposition à Pointe-à-Callière, elle est maintenant responsable du volet archéologie et conservation dans le cadre du projet d’expansion du Musée, notamment pour la mise en valeur du Fort de Ville-Marie et pour les travaux de recherches archéologiques menés sur le site du marché Sainte-Anne/Parlement de la province du Canada. Elle dirige la collection « Archéologie du Québec », produite par Pointe-à-Callière en partenariat avec le ministère de la Culture et des Communications, éditée par les Éditions de l’Homme. En 2019, elle a reçu le prix des Dix décerné par la Société des Dix pour souligner son engagement dans la recherche et sa contribution à l’histoire de Montréal et du Québec. La Société historique de Montréal a également remis sa médaille 2019 à Louise Pothier et son équipe d’archéologues à Pointe-à-Callière pour leur contribution à l’histoire de Montréal.`
+                bio: "Conservatrice et archéologue en chef à Pointe-à-Callière, Louise Pothier œuvre en interprétation du patrimoine depuis plus de 25 ans."
             },
             9: {
                 nom: "Louis-Georges Harvey",
                 fauteuil: "Fauteuil #9",
                 img: "https://lh3.googleusercontent.com/d/1Kr7mis6M0ZDgAm1csJ6Yqv1ROyW2deDC?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Marcel Moussette (1997), André Vachon (1970), Jacques Rousseau (1951), Aristide-Beaugrand-Champagne (1935).\n\nLouis-Georges Harvey est professeur titulaire au Département d’histoire de l’Université Bishop. Il y enseigne notamment l’histoire du Québec et des États-Unis, ainsi que l’histoire des Amériques dans une perspective comparative. Spécialiste de l’histoire politique et de l’histoire culturelle, il a publié de nombreux articles sur la diffusion de l’imprimé en Amérique au XVIIIe et XIXe siècle et sur le discours politique au Québec et aux États-Unis avant 1840.\n\nSon ouvrage Le Printemps de l’Amérique française, Américanité, anticolonialisme et républicanisme dans le discours politique québécois, 1805-1837 (Boréal, 2005) a contesté les interprétations dominantes du mouvement patriote. Il travaille actuellement sur le discours politique des Anglophones du Bas-Canada.`
+                bio: "Louis-Georges Harvey est professeur titulaire au Département d’histoire de l’Université Bishop..."
             },
             10: {
                 nom: "Dominique Deslandres",
                 fauteuil: "Fauteuil #10",
                 img: "https://lh3.googleusercontent.com/d/1rpl3xNu6xh85o6h4B_WOVOBXSZG-uIQL?auto=format&fit=crop&q=80&w=500",
-                bio: `* Fauteuil précédemment occupé par Marie-Thérèse Lefebvre (2002), Michel Lessard (1994), André Sévigny (1988), Sylvio LeBlond (1969), Léon Trépanier (1954), Maréchal Nantel (1940), Montarville Boucher de la Bruère (1935).\n\nLa Société des Dix a accueilli en novembre 2017 Dominique Deslandres en remplacement de Marie-Thérèse Lefebvre, devenue membre émérite.\n\nProfesseure titulaire au Département d’histoire de l’Université de Montréal, elle consacre ses travaux à l’histoire comparée des mentalités socioreligieuses d’Europe et d’Amérique à l’époque moderne. Ses recherches portent aussi sur l’histoire comparée de la construction identitaire aux 16e-18e  siècles en Europe et en Amérique.\n\nParmi plusieurs publications de Dominique Deslandres, signalons son ouvrage Croire et faire croire. Les missions françaises au 17e siècle (Paris, Fayard, 2003) qui démontre les liens profonds unissant la perception de l’altérité et les représentations de l’identité moderne dans le contexte de la première mondialisation que constitue l’impérialisme missionnaire alors même que la France subissait une véritable colonisation interne. Elle rédige en ce moment une biographie de Marie Guyart de l’Incarnation, fondatrice du tout premier établissement d’enseignement féminin en Amérique, tout en poursuivant ses travaux sur les rôles des sexes, de la religion et de la politique dans l’histoire de l’expansion française moderne.`
+                bio: "Professeure titulaire au Département d’histoire de l’Université de Montréal, Dominique Deslandres consacre ses travaux à l’histoire comparée des mentalités..."
             }
         };
 
-        // Données dynamiques des membres émérites et associés
         const emeritesData = {
-            "Simon Langlois": "Simon Langlois est sociologue et professeur émérite du Département de sociologie de l’Université Laval. Il détient un doctorat de l’université René-Descartes (Sorbonne Paris V) et une maitrise et un baccalauréat en sociologie de l’Université Laval. Il est membre de l’Académie des sciences sociales de la Société royale du Canada qu’il a présidée pendant deux ans. Il a été coordonnateur d’un grand projet international sur les tendances comparées « Comparative Charting of Social Change », dont les ouvrages ont été publiés par McGill-Queen’s University Press.",
-            "Laurier Lacroix": "Laurier Lacroix est professeur émérite de l'Université du Québec à Montréal (UQAM) et critique d'art. Spécialiste de l'histoire de l'art au Québec, ses travaux pionniers sur la peinture, les institutions artistiques et la figure de Marc-Aurèle Fortin font autorité. Il a également dirigé d'importants projets d'exposition et de mise en valeur du patrimoine visuel québécois.",
-            "Bernard Andrès": "Bernard Andrès est professeur émérite au Département d'études littéraires de l'UQAM. Spécialiste de la littérature de la Nouvelle-France et du début du régime britannique, ses recherches portent sur les récits de voyage, la satire, la presse et les imprimés politiques. Il a dirigé de nombreux ouvrages collectifs et anime des projets de recherche et documentaires majeurs sur la littérature québécoise.",
-            "Fernand Harvey": "Fernand Harvey est historien et sociologue, chercheur émérite de l'Institut national de la recherche scientifique (INRS). Ses travaux novateurs sur l'histoire culturelle du Québec, le loisir, le mouvement ouvrier et la pensée sociale de Fernand Dumont ont profondément marqué l'historiographie québécoise contemporaine.",
-            "Gilles Gallichan": "Gilles Gallichan a été bibliothécaire et historien à la Bibliothèque de l'Assemblée nationale du Québec pendant de nombreuses années. Auteur d'ouvrages remarqués sur l'histoire du livre, des bibliothèques et des institutions politiques, il est un spécialiste incontournable de l'histoire culturelle et politique de Québec aux XIXe et XXe siècles.",
-            "Jean Simard": "Jean Simard est professeur émérite du Département des sciences historiques de l'Université Laval. Anthropologue et ethnologue, il a consacré l'essentiel de sa carrière à l'étude de l'art religieux, du patrimoine cultuel et des mentalités populaires au Québec à travers les siècles.",
-            "Marcel Moussette": "Marcel Moussette est professeur émérite du Département des sciences historiques de l'Université Laval et archéologue de renom. Ses recherches approfondies sur la culture matérielle, l'alimentation, l'habitat et les débuts de l'implantation française en Amérique ont grandement renouvelé l'archéologie historique québécoise.",
-            "Marie-Thérèse Lefebvre": "Marie-Thérèse Lefebvre est musicologue et professeure retraitée de la Faculté de musique de l'Université de Montréal. Spécialiste de l'histoire de la musique au Québec au XXe siècle, elle a publié des études de référence sur la vie musicale, les compositeurs modernes et la réception de la création artistique.",
-            "Mireille Barrière": "Mireille Barrière est une spécialiste de l'histoire culturelle et littéraire. Ses contributions approfondies à la connaissance des milieux intellectuels et artistiques du Québec ont enrichi de manière significative les archives et les publications de la Société des Dix.",
-            "Pierre Trépanier": "Pierre Trépanier est historien et professeur retraité du Département d'histoire de l'Université de Montréal. Ses recherches minutieuses sur l'histoire intellectuelle, religieuse et politique du Québec des XIXe et XXe siècles, notamment sur le catholicisme social et le nationalisme, constituent des repères historiographiques essentiels.",
-            "Roger LeMoine": "Roger LeMoine est un éminent spécialiste de la littérature québécoise et canadienne-française, particulièrement reconnu pour ses travaux critiques et philologiques sur l'œuvre d'Émile Nelligan et sur les figures marquantes de la poésie et des lettres du XIXe siècle.",
-            "Yvan Lamonde": "Yvan Lamonde est professeur émérite du Département d'histoire de l'Université McGill. Figure majeure de l'histoire intellectuelle du Québec, il est l'auteur d'œuvres magistrales sur l'histoire des idées, la laïcité, la lecture et la sociabilité intellectuelle de la Nouvelle-France à la Révolution tranquille."
+            "Simon Langlois": "Simon Langlois est sociologue et professeur émérite du Département de sociologie de l’Université Laval.",
+            "Laurier Lacroix": "Laurier Lacroix est professeur émérite de l'Université du Québec à Montréal (UQAM) et critique d'art.",
+            "Bernard Andrès": "Bernard Andrès est professeur émérite au Département d'études littéraires de l’UQAM.",
+            "Fernand Harvey": "Fernand Harvey est historien et sociologue, chercheur émérite de l'INRS.",
+            "Gilles Gallichan": "Gilles Gallichan a été bibliothécaire et historien à la Bibliothèque de l'Assemblée nationale du Québec.",
+            "Jean Simard": "Jean Simard est professeur émérite du Département des sciences historiques de l'Université Laval.",
+            "Marcel Moussette": "Marcel Moussette est professeur émérite du Département des sciences historiques de l'Université Laval et archéologue.",
+            "Marie-Thérèse Lefebvre": "Marie-Thérèse Lefebvre est musicologue et professeure retraitée de la Faculté de musique de l'Université de Montréal.",
+            "Mireille Barrière": "Mireille Barrière est une spécialiste de l'histoire culturelle et littéraire.",
+            "Pierre Trépanier": "Pierre Trépanier est historien et professeur retraité du Département d'histoire de l'Université de Montréal.",
+            "Roger LeMoine": "Roger LeMoine est un éminent spécialiste de la littérature québécoise et canadienne-française.",
+            "Yvan Lamonde": "Yvan Lamonde est professeur émérite du Département d'histoire de l'Université McGill."
         };
 
         function toggleSubmenu(id) {
             const submenu = document.getElementById(id);
             const icon = document.getElementById(id + '-icon');
-            
             if (submenu.classList.contains('hidden')) {
                 submenu.classList.remove('hidden');
                 icon.classList.add('rotate-180');
@@ -1307,15 +1030,6 @@
             }
         }
 
-        function scrollNetflixSlider(direction) {
-            const slider = document.getElementById('netflix-slider');
-            const scrollAmount = 320;
-            slider.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-
         function switchTab(viewId, pageTitle) {
             document.getElementById('current-page-title').innerText = pageTitle;
 
@@ -1323,14 +1037,15 @@
             const genericView = document.getElementById('view-generic');
             const societe2026View = document.getElementById('view-societe-2026');
             const membresView = document.getElementById('view-membres');
+            const prixView = document.getElementById('view-prix');
             const genericTitle = document.getElementById('generic-title');
             const genericContent = document.getElementById('generic-content');
 
-            // Masquer toutes les vues principales
             accueilView.classList.add('hidden');
             genericView.classList.add('hidden');
             societe2026View.classList.add('hidden');
             membresView.classList.add('hidden');
+            prixView.classList.add('hidden');
 
             if (viewId === 'accueil') {
                 accueilView.classList.remove('hidden');
@@ -1338,25 +1053,40 @@
                 societe2026View.classList.remove('hidden');
             } else if (viewId === 'membres') {
                 membresView.classList.remove('hidden');
+            } else if (viewId === 'prix') {
+                prixView.classList.remove('hidden');
             } else {
                 genericView.classList.remove('hidden');
                 genericTitle.innerText = pageTitle;
-
-                // Injection dynamique de texte par défaut pour les autres onglets
                 genericContent.innerHTML = `
                     <p class="text-sm leading-relaxed text-gray-700 text-justify">
-                        Fondée en 1935, la Société des Dix était à l’origine une académie d’historiens québécois intéressés par la recherche sur l’Amérique française. La Société a accueilli au fil des ans des spécialistes de diverses disciplines – archivistes, littéraires, musiciens, archéologues, sociologues, etc. – intéressés par l’histoire. Depuis l’Antiquité, les académies ont souvent retenu le nombre de dix membres comme idéal au sein d’un groupe, afin de varier les points de vue et permettre à tous de s’exprimer. Notre société s’inscrit dans cette longue tradition.
-                    </p>
-                    <p class="text-sm leading-relaxed text-gray-700 text-justify">
-                        Les membres de la Société des Dix sont choisis par cooptation. Ils sont élus à vie, mais ils peuvent se retirer librement. Depuis sa création, la Société a accueilli plus de 50 spécialistes qui ont occupé les différents Fauteuils.
-                    </p>
-                    <p class="text-sm leading-relaxed text-gray-700 text-justify">
-                        Les Dix font connaître leurs travaux dans <em>Les Cahiers des Dix</em>, un recueil annuel existant depuis 1936. Les Cahiers sont publiés par les Éditions La Liberté de Québec. La Société des Dix n’est soutenue par aucune subvention et les Amis des Dix apportent une contribution non négligeable à son rayonnement. La Société remet chaque année le Prix des Dix qui honore une personne qui a œuvré, souvent dans l’ombre, à la connaissance historique sur l’Amérique française.
+                        Fondée en 1935, la Société des Dix était à l’origine une académie d’historiens québécois intéressés par la recherche sur l’Amérique française...
                     </p>
                 `;
             }
-
             document.getElementById('main-content').scrollTop = 0;
+        }
+
+        function filterPrixList() {
+            const query = document.getElementById('prix-search').value.toLowerCase();
+            const container = document.getElementById('prix-quick-list');
+            const buttons = container.getElementsByTagName('button');
+            for (let btn of buttons) {
+                const text = btn.innerText.toLowerCase();
+                btn.style.display = text.includes(query) ? "" : "none";
+            }
+        }
+
+        function openPrixModal(year, name, imgSrc, bioText) {
+            document.getElementById('prix-modal-year').innerText = "Année " + year;
+            document.getElementById('prix-modal-name').innerText = name;
+            document.getElementById('prix-modal-img').style.backgroundImage = `url('${imgSrc}')`;
+            document.getElementById('prix-modal-text').innerText = bioText;
+            document.getElementById('prix-modal').classList.remove('hidden');
+        }
+
+        function closePrixModal() {
+            document.getElementById('prix-modal').classList.add('hidden');
         }
 
         function openJoinModal() {
@@ -1369,45 +1099,17 @@
 
         function handleFormSubmit(e) {
             e.preventDefault();
-            alert("Merci de votre intérêt envers la Société des Dix. Votre demande a bien été transmise à notre secrétariat.");
+            alert("Votre demande a bien été transmise.");
             closeJoinModal();
-        }
-
-        function openVideoModal(title, videoSrc, synopsis) {
-            const modal = document.getElementById('video-modal');
-            const iframe = document.getElementById('modal-video-iframe');
-            const titleEl = document.getElementById('modal-video-title');
-            const synopsisEl = document.getElementById('modal-video-synopsis');
-
-            titleEl.innerText = title;
-            synopsisEl.innerText = synopsis;
-            
-            let finalSrc = videoSrc;
-            if (finalSrc) {
-                finalSrc += finalSrc.includes('?') ? '&autoplay=1' : '?autoplay=1';
-                iframe.src = finalSrc;
-            }
-            
-            modal.classList.remove('hidden');
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('video-modal');
-            const iframe = document.getElementById('modal-video-iframe');
-
-            iframe.src = '';
-            modal.classList.add('hidden');
         }
 
         function openMembreModal(id) {
             const membre = membresData[id];
             if (!membre) return;
-
             document.getElementById('membre-modal-name').innerText = membre.nom;
             document.getElementById('membre-modal-badge').innerText = membre.fauteuil;
             document.getElementById('membre-modal-img').style.backgroundImage = `url('${membre.img}')`;
             document.getElementById('membre-modal-bio').innerText = membre.bio;
-
             document.getElementById('membre-modal').classList.remove('hidden');
         }
 
@@ -1419,11 +1121,7 @@
             document.getElementById('emerite-modal-name').innerText = name;
             document.getElementById('emerite-modal-badge').innerText = badgeText;
             document.getElementById('emerite-modal-img').style.backgroundImage = `url('${imgSrc}')`;
-            
-            // Attribution dynamique de la biographie correspondante
-            const bioText = emeritesData[name] || "Biographie en cours de rédaction pour ce membre émérite.";
-            document.getElementById('emerite-modal-bio').innerText = bioText;
-
+            document.getElementById('emerite-modal-bio').innerText = emeritesData[name] || "Biographie en cours de rédaction.";
             document.getElementById('emerite-modal').classList.remove('hidden');
         }
 
@@ -1434,23 +1132,18 @@
         function openChantalModal() {
             document.getElementById('chantal-modal').classList.remove('hidden');
         }
-
         function closeChantalModal() {
             document.getElementById('chantal-modal').classList.add('hidden');
         }
-
         function openLangloisModal() {
             document.getElementById('langlois-modal').classList.remove('hidden');
         }
-
         function closeLangloisModal() {
             document.getElementById('langlois-modal').classList.add('hidden');
         }
-
         function openHarveyModal() {
             document.getElementById('harvey-modal').classList.remove('hidden');
         }
-
         function closeHarveyModal() {
             document.getElementById('harvey-modal').classList.add('hidden');
         }
